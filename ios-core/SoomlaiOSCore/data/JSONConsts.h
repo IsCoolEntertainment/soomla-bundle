@@ -14,6 +14,8 @@
  limitations under the License.
  */
 
+#import <Foundation/Foundation.h>
+
 /** Global **/
 
 extern NSString *const SOOM_ENTITY_NAME;
