@@ -18,7 +18,7 @@
 
 @implementation StoreAssetsBridge
 
-static NSString* TAG = @"SOOMLA StoreAssets";
+static NSString* STORE_ASSETS_BRIDGE_TAG = @"SOOMLA StoreAssets";
 
 + (StoreAssetsBridge *)sharedInstance {
     static StoreAssetsBridge * instance = nil;
@@ -34,7 +34,7 @@ static NSString* TAG = @"SOOMLA StoreAssets";
 }
 
 - (BOOL)createFromDict:(NSDictionary*)storeAssetsDict {
-    LogDebug(TAG, ([NSString stringWithFormat:@"the storeAssets dit is %@", storeAssetsDict]));
+    LogDebug(STORE_ASSETS_BRIDGE_TAG, ([NSString stringWithFormat:@"the storeAssets dit is %@", storeAssetsDict]));
 
     @try {
         NSDictionary* storeInfo = storeAssetsDict;
@@ -95,7 +95,7 @@ static NSString* TAG = @"SOOMLA StoreAssets";
 
         return YES;
     } @catch (NSException* ex) {
-        LogError(TAG, @"An error occured while trying to parse store assets JSON.");
+        LogError(STORE_ASSETS_BRIDGE_TAG, @"An error occured while trying to parse store assets JSON.");
     }
 
     return NO;

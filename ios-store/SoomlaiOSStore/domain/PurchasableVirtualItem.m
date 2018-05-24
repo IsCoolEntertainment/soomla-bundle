@@ -28,7 +28,7 @@
 
 @synthesize purchaseType;
 
-static NSString* TAG = @"SOOMLA PurchasableVirtualItem";
+static NSString* PURCHASABLE_VIRTUAL_ITEM_TAG = @"SOOMLA PurchasableVirtualItem";
 
 - (id)initWithName:(NSString *)oName andDescription:(NSString *)oDescription
          andItemId:(NSString *)oItemId andPurchaseType:(PurchaseType*)oPurchaseType {
@@ -64,7 +64,7 @@ static NSString* TAG = @"SOOMLA PurchasableVirtualItem";
             
             self.purchaseType = [[PurchaseWithVirtualItem alloc] initWithVirtualItem:pItemId andAmount:amount];
         } else {
-            LogError(TAG, @"Purchase type not recognized !");
+            LogError(PURCHASABLE_VIRTUAL_ITEM_TAG, @"Purchase type not recognized !");
         }
         
         if (self.purchaseType) {

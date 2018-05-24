@@ -20,7 +20,7 @@
 
 @implementation SoomlaUtils
 
-static NSString* TAG = @"SOOMLA SoomlaUtils";
+static NSString* SOOMLA_UTILS_TAG = @"SOOMLA SoomlaUtils";
 
 + (void)LogDebug:(NSString*)tag withMessage:(NSString*)msg {
     if (DEBUG_LOG) {
@@ -39,7 +39,7 @@ static NSString* TAG = @"SOOMLA SoomlaUtils";
                                     options: NSJSONReadingMutableContainers
                                       error: &error];
     if (error) {
-        LogError(TAG, ([NSString stringWithFormat:@"There was a problem parsing the given JSON string: %@ error: %@", str, [error localizedDescription]]));
+        LogError(SOOMLA_UTILS_TAG, ([NSString stringWithFormat:@"There was a problem parsing the given JSON string: %@ error: %@", str, [error localizedDescription]]));
 
         return NULL;
     }
@@ -54,7 +54,7 @@ static NSString* TAG = @"SOOMLA SoomlaUtils";
                                     options: NSJSONReadingMutableContainers
                                       error: &error];
     if (error) {
-        LogError(TAG, ([NSString stringWithFormat:@"There was a problem parsing the given JSON string: %@ error: %@", str, [error localizedDescription]]));
+        LogError(SOOMLA_UTILS_TAG, ([NSString stringWithFormat:@"There was a problem parsing the given JSON string: %@ error: %@", str, [error localizedDescription]]));
 
         return NULL;
     }
@@ -69,7 +69,7 @@ static NSString* TAG = @"SOOMLA SoomlaUtils";
                                                          error:&error];
 
     if (! jsonData) {
-        LogError(TAG, ([NSString stringWithFormat:@"There was a problem parsing the given NSDictionary. error: %@", [error localizedDescription]]));
+        LogError(SOOMLA_UTILS_TAG, ([NSString stringWithFormat:@"There was a problem parsing the given NSDictionary. error: %@", [error localizedDescription]]));
 
         return NULL;
     }
@@ -84,7 +84,7 @@ static NSString* TAG = @"SOOMLA SoomlaUtils";
                                                          error:&error];
 
     if (! jsonData) {
-        LogError(TAG, ([NSString stringWithFormat:@"There was a problem parsing the given NSArray. error: %@", [error localizedDescription]]));
+        LogError(SOOMLA_UTILS_TAG, ([NSString stringWithFormat:@"There was a problem parsing the given NSArray. error: %@", [error localizedDescription]]));
 
         return NULL;
     }
@@ -114,7 +114,7 @@ static NSString* TAG = @"SOOMLA SoomlaUtils";
                                       attributes:nil
                                            error:&error])
             {
-                LogError(TAG, ([NSString stringWithFormat:@"Create directory error: %@", error]));
+                LogError(SOOMLA_UTILS_TAG, ([NSString stringWithFormat:@"Create directory error: %@", error]));
                 return nil;
             }
         }

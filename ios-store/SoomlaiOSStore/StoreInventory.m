@@ -31,7 +31,7 @@
 
 @implementation StoreInventory
 
-static NSString* TAG = @"SOOMLA StoreInventory";
+static NSString* STORE_INVENTORY_TAG = @"SOOMLA StoreInventory";
 
 + (void)buyItemWithItemId:(NSString*)itemId andPayload:(NSString*)payload{
     PurchasableVirtualItem* pvi = (PurchasableVirtualItem*) [[StoreInfo getInstance] virtualItemWithId:itemId];
@@ -100,7 +100,7 @@ static NSString* TAG = @"SOOMLA StoreInventory";
     @try {
         upgradeVG = (UpgradeVG*)[[StoreInfo getInstance] virtualItemWithId:upgradeVGItemId];
     } @catch (VirtualItemNotFoundException* e) {
-        LogDebug(TAG, ([NSString stringWithFormat:@"This is BAD! Can't find the current upgrade (%@) of: %@", upgradeVGItemId, goodItemId]));
+        LogDebug(STORE_INVENTORY_TAG, ([NSString stringWithFormat:@"This is BAD! Can't find the current upgrade (%@) of: %@", upgradeVGItemId, goodItemId]));
     }
     if (upgradeVG) {
         NSString* nextItemId = upgradeVG.nextGoodItemId;
@@ -176,11 +176,11 @@ static NSString* TAG = @"SOOMLA StoreInventory";
         return NO;
     }
     
-    LogDebug(TAG, @"Resetting balances");
+    LogDebug(STORE_INVENTORY_TAG, @"Resetting balances");
     
     [self clearCurrentState];
     
-    LogDebug(TAG, @"Current state was cleared");
+    LogDebug(STORE_INVENTORY_TAG, @"Current state was cleared");
     
     @try {
         for (NSString *itemId in replaceBalances) {
@@ -191,14 +191,14 @@ static NSString* TAG = @"SOOMLA StoreInventory";
                 item = [[StoreInfo getInstance] virtualItemWithId:itemId];
             }
             @catch (NSException *exception) {
-                LogError(TAG, ([NSString stringWithFormat:@"The given itemId %@ was not found. Can't force it.", itemId]));
+                LogError(STORE_INVENTORY_TAG, ([NSString stringWithFormat:@"The given itemId %@ was not found. Can't force it.", itemId]));
                 continue;
             }
             
             NSNumber *updatedBalance = updatedValues[@"balance"];
             if (updatedBalance) {
                 [item resetBalance:[updatedBalance intValue] withEvent:NO];
-                LogDebug(TAG, ([NSString stringWithFormat:@"finished balance sync for itemId: %@", itemId]));
+                LogDebug(STORE_INVENTORY_TAG, ([NSString stringWithFormat:@"finished balance sync for itemId: %@", itemId]));
             }
             
             NSNumber *rawEquippedState = updatedValues[@"equipped"];
@@ -214,10 +214,10 @@ static NSString* TAG = @"SOOMLA StoreInventory";
                             [equippableItem unequipWithEvent:NO];
                         }
                     }
-                    LogDebug(TAG, ([NSString stringWithFormat:@"finished equip balance sync for itemId: %@", itemId]));
+                    LogDebug(STORE_INVENTORY_TAG, ([NSString stringWithFormat:@"finished equip balance sync for itemId: %@", itemId]));
                 }
                 @catch (NSException *exception) {
-                    LogError(TAG, ([NSString stringWithFormat:@"tried to equip a non-equippable item: %@", itemId]));
+                    LogError(STORE_INVENTORY_TAG, ([NSString stringWithFormat:@"tried to equip a non-equippable item: %@", itemId]));
                 }
             }
             
@@ -226,10 +226,10 @@ static NSString* TAG = @"SOOMLA StoreInventory";
                 @try {
                     UpgradeVG *upgradeVG = (UpgradeVG*)[[StoreInfo getInstance] virtualItemWithId:currentUpgradeId];
                     [upgradeVG giveAmount:1 withEvent:NO];
-                    LogDebug(TAG, ([NSString stringWithFormat:@"finished upgrade balance sync for itemId: %@", currentUpgradeId]));
+                    LogDebug(STORE_INVENTORY_TAG, ([NSString stringWithFormat:@"finished upgrade balance sync for itemId: %@", currentUpgradeId]));
                 }
                 @catch (NSException *exception) {
-                    LogDebug(TAG, ([NSString stringWithFormat:@"The given upgradeId was of a non UpgradeVG VirtualItem. Can't force it. itemId: %@", currentUpgradeId]));
+                    LogDebug(STORE_INVENTORY_TAG, ([NSString stringWithFormat:@"The given upgradeId was of a non UpgradeVG VirtualItem. Can't force it. itemId: %@", currentUpgradeId]));
                 }
             }
         }
@@ -237,7 +237,7 @@ static NSString* TAG = @"SOOMLA StoreInventory";
         return YES;
     }
     @catch (NSException *exception) {
-        LogDebug(TAG, ([NSString stringWithFormat:@"Unknown error has occurred while resetting item balances %@", exception.description]));
+        LogDebug(STORE_INVENTORY_TAG, ([NSString stringWithFormat:@"Unknown error has occurred while resetting item balances %@", exception.description]));
     }
     
     return NO;

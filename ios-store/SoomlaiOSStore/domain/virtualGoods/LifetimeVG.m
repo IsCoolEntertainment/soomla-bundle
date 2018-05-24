@@ -21,7 +21,7 @@
 
 @implementation LifetimeVG
 
-static NSString* TAG = @"SOOMLA LifetimeVG";
+static NSString* LIFETIME_VG_TAG = @"SOOMLA LifetimeVG";
 
 /*
  see parent
@@ -31,7 +31,7 @@ static NSString* TAG = @"SOOMLA LifetimeVG";
  */
 - (int)giveAmount:(int)amount withEvent:(BOOL)notify {
     if (amount > 1) {
-        LogDebug(TAG, @"You tried to give more than one LifetimeVG. Will try to give one anyway.");
+        LogDebug(LIFETIME_VG_TAG, @"You tried to give more than one LifetimeVG. Will try to give one anyway.");
         amount = 1;
     }
     

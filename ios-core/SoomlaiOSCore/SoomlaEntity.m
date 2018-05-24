@@ -22,7 +22,7 @@
 
 @synthesize name, description, ID;
 
-static NSString* TAG = @"SOOMLA SoomlaEntity";
+static NSString* SOOMLA_ENTITY_TAG = @"SOOMLA SoomlaEntity";
 
 - (id)init{
     self = [super init];
@@ -99,7 +99,7 @@ static NSString* TAG = @"SOOMLA SoomlaEntity";
     if (clazz) {
         obj = [[clazz alloc] initWithDictionary:dict];
     } else {
-        LogDebug(TAG, ([NSString stringWithFormat:@"Error when trying to close class."]));
+        LogDebug(SOOMLA_ENTITY_TAG, ([NSString stringWithFormat:@"Error when trying to close class."]));
     }
     
     return obj;

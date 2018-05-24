@@ -29,7 +29,7 @@
 
 @synthesize targetItemId, amount;
 
-static NSString* TAG = @"SOOMLA PurchaseWithVirtualItem";
+static NSString* PURCHASE_WITH_VIRTUAL_ITEM_TAG = @"SOOMLA PurchaseWithVirtualItem";
 
 - (id) initWithVirtualItem:(NSString*)oTargetItemId andAmount:(int)oAmount {
     if (self = [super init]) {
@@ -44,7 +44,7 @@ static NSString* TAG = @"SOOMLA PurchaseWithVirtualItem";
  see parent
  */
 - (void)buyWithPayload:(NSString*)payload {
-    LogDebug(TAG, ([NSString stringWithFormat:@"Trying to buy a %@ with %d pieces of %@.",
+    LogDebug(PURCHASE_WITH_VIRTUAL_ITEM_TAG, ([NSString stringWithFormat:@"Trying to buy a %@ with %d pieces of %@.",
                     self.associatedItem.name, self.amount, self.targetItemId]));
     
     [StoreEventHandling postItemPurchaseStarted:self.associatedItem.itemId];
@@ -53,7 +53,7 @@ static NSString* TAG = @"SOOMLA PurchaseWithVirtualItem";
     @try {
         item = [[StoreInfo getInstance] virtualItemWithId:targetItemId];
     } @catch (VirtualItemNotFoundException* ex) {
-        LogError(TAG, @"Target virtual item doesn't exist !");
+        LogError(PURCHASE_WITH_VIRTUAL_ITEM_TAG, @"Target virtual item doesn't exist !");
         return;
     }
     VirtualItemStorage* storage = [[StorageManager getInstance] virtualItemStorage:item];

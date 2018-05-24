@@ -23,14 +23,14 @@
 
 @synthesize rewards;
 
-static NSString* TAG = @"SOOMLA RandomReward";
+static NSString* RANDOM_REWARD_RANDOM_REWARD_TAG = @"SOOMLA RandomReward";
 
 
 - (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName andRewards:(NSArray *)oRewards {
     if (self = [super initWithRewardId:oRewardId andName:oName]) {
         
         if (![oRewards count]) {
-            LogError(TAG, @"this reward doesn't make sense without items");
+            LogError(RANDOM_REWARD_RANDOM_REWARD_TAG, @"this reward doesn't make sense without items");
         }
         
         self.rewards = oRewards;
@@ -46,7 +46,7 @@ static NSString* TAG = @"SOOMLA RandomReward";
         NSArray* rewardsArr = dict[SOOM_REWARDS];
         
         if (!rewardsArr) {
-            LogDebug(TAG, @"reward has no meaning without children");
+            LogDebug(RANDOM_REWARD_RANDOM_REWARD_TAG, @"reward has no meaning without children");
             rewardsArr = [NSMutableArray array];
         }
         
@@ -89,7 +89,7 @@ static NSString* TAG = @"SOOMLA RandomReward";
     }
     
     if (![canBeGivenRewards count]) {
-        LogDebug(TAG, ([NSString stringWithFormat:@"No more rewards to give in this Random Reward: %@", self.ID]));
+        LogDebug(RANDOM_REWARD_RANDOM_REWARD_TAG, ([NSString stringWithFormat:@"No more rewards to give in this Random Reward: %@", self.ID]));
         return NO;
     }
     

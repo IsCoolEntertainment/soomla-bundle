@@ -130,7 +130,7 @@
             rewardStateDict[rewardId] = rewardValuesDict;
         }
         @catch (NSException *exception) {
-            LogDebug(TAG, ([NSString stringWithFormat:@"Unable to set reward %@ state. error: %@", rewardId, exception.description]));
+            LogDebug(REWARD_STORAGE_REWARD_STORAGE_TAG, ([NSString stringWithFormat:@"Unable to set reward %@ state. error: %@", rewardId, exception.description]));
         }
     }
     
@@ -161,7 +161,7 @@
         }
     }
     @catch (NSException *exception) {
-        LogError(TAG, ([NSString stringWithFormat:@"Unable to set state for rewards. error: %@", exception.description]));
+        LogError(REWARD_STORAGE_REWARD_STORAGE_TAG, ([NSString stringWithFormat:@"Unable to set state for rewards. error: %@", exception.description]));
         return NO;
     }
     
@@ -206,7 +206,7 @@
     return rewardIds;
 }
 
-static NSString* TAG = @"SOOMLA RewardStorage";
+static NSString* REWARD_STORAGE_REWARD_STORAGE_TAG = @"SOOMLA RewardStorage";
 
 + (NSString *)keyRewardsWithRewardId:(NSString *)rewardId AndPostfix:(NSString *)postfix {
     return [NSString stringWithFormat: @"%@rewards.%@.%@", DB_KEY_PREFIX, rewardId, postfix];

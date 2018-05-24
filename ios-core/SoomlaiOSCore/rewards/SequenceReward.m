@@ -24,13 +24,13 @@
 
 @synthesize rewards;
 
-static NSString* TAG = @"SOOMLA SequenceReward";
+static NSString* SEQUENCE_REWARD_TAG = @"SOOMLA SequenceReward";
 
 - (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName andRewards:(NSArray *)oRewards {
     if (self = [super initWithRewardId:oRewardId andName:oName]) {
         
         if (![oRewards count]) {
-            LogError(TAG, @"this reward doesn't make sense without items");
+            LogError(SEQUENCE_REWARD_TAG, @"this reward doesn't make sense without items");
         }
 
         self.rewards = oRewards;
@@ -47,7 +47,7 @@ static NSString* TAG = @"SOOMLA SequenceReward";
         NSArray* rewardsArr = dict[SOOM_REWARDS];
         
         if (!rewardsArr) {
-            LogDebug(TAG, @"reward has no meaning without children");
+            LogDebug(SEQUENCE_REWARD_TAG, @"reward has no meaning without children");
             rewardsArr = [NSMutableArray array];
         }
         

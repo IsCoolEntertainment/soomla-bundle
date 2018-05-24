@@ -12,15 +12,15 @@
 namespace soomla {
 
 
-    static CCStoreEventDispatcher *s_SharedInstance = NULL;
+    static CCStoreEventDispatcher *s_StoreEventDispatcherInstance = NULL;
 
     CCStoreEventDispatcher *CCStoreEventDispatcher::getInstance() {
-        if (!s_SharedInstance) {
-            s_SharedInstance = new CCStoreEventDispatcher();
-            s_SharedInstance->init();
+        if (!s_StoreEventDispatcherInstance) {
+            s_StoreEventDispatcherInstance = new CCStoreEventDispatcher();
+            s_StoreEventDispatcherInstance->init();
         }
 
-        return s_SharedInstance;
+        return s_StoreEventDispatcherInstance;
     }
 
     bool CCStoreEventDispatcher::init() {

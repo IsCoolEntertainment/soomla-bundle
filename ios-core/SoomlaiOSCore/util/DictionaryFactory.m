@@ -12,7 +12,7 @@
 
 @implementation DictionaryFactory
 
-static NSString* TAG = @"SOOMLA DictionaryFactory";
+static NSString* DICTIONARY_FACTORY_TAG = @"SOOMLA DictionaryFactory";
 
 - (id)createObjectWithDictionary:(NSDictionary *)dict {
     
@@ -29,7 +29,7 @@ static NSString* TAG = @"SOOMLA DictionaryFactory";
     if (clazz) {
         obj = [[clazz alloc] initWithDictionary:dict];
     } else {
-        LogError(TAG, ([NSString stringWithFormat:@"Unknown class name: %@", className]));
+        LogError(DICTIONARY_FACTORY_TAG, ([NSString stringWithFormat:@"Unknown class name: %@", className]));
     }
     
     return obj;

@@ -25,7 +25,7 @@
 
 @synthesize associatedItemId, amount;
 
-static NSString* TAG = @"SOOMLA VirtualItemReward";
+static NSString* VIRTUAL_ITEM_REWARD_TAG = @"SOOMLA VirtualItemReward";
 
 - (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName andAmount:(int)oAmount andAssociatedItemId:(NSString *)oAssociatedItemId {
     if (self = [super initWithRewardId:oRewardId andName:oName]) {
@@ -60,7 +60,7 @@ static NSString* TAG = @"SOOMLA VirtualItemReward";
         [StoreInventory giveAmount:self.amount ofItem:self.associatedItemId];
     }
     @catch (VirtualItemNotFoundException *ex) {
-        LogError(TAG, ([NSString stringWithFormat:@"(give) Couldn't find associated itemId: %@", self.associatedItemId]));
+        LogError(VIRTUAL_ITEM_REWARD_TAG, ([NSString stringWithFormat:@"(give) Couldn't find associated itemId: %@", self.associatedItemId]));
         return NO;
     }
     
@@ -72,7 +72,7 @@ static NSString* TAG = @"SOOMLA VirtualItemReward";
         [StoreInventory takeAmount:self.amount ofItem:self.associatedItemId];
     }
     @catch (VirtualItemNotFoundException *ex) {
-        LogError(TAG, ([NSString stringWithFormat:@"(take) Couldn't find associated itemId: %@", self.associatedItemId]));
+        LogError(VIRTUAL_ITEM_REWARD_TAG, ([NSString stringWithFormat:@"(take) Couldn't find associated itemId: %@", self.associatedItemId]));
         return NO;
     }
     

@@ -28,19 +28,19 @@ namespace soomla {
 
 #define TAG "SOOMLA CoreBridge"
 
-    static CCCoreBridge *sInstance = NULL;
+    static CCCoreBridge *sCoreBridgeInstance = NULL;
 
     CCCoreBridge *CCCoreBridge::getInstance() {
-        if (!sInstance)
+        if (!sCoreBridgeInstance)
         {
             #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS) || (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
-            sInstance = new CCNativeCoreBridge();
+            sCoreBridgeInstance = new CCNativeCoreBridge();
             #else
-            sInstance = new CCCoreBridge();
+            sCoreBridgeInstance = new CCCoreBridge();
             #endif
-            sInstance->retain();
+            sCoreBridgeInstance->retain();
         }
-        return sInstance;
+        return sCoreBridgeInstance;
     }
 
     void CCCoreBridge::initShared() {

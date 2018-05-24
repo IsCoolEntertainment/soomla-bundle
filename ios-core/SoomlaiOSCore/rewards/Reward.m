@@ -25,7 +25,7 @@
 
 @synthesize schedule;
 
-static NSString* TAG = @"SOOMLA Reward";
+static NSString* REWARD_TAG = @"SOOMLA Reward";
 static DictionaryFactory* dictionaryFactory;
 
 
@@ -75,7 +75,7 @@ static DictionaryFactory* dictionaryFactory;
 
 - (BOOL)give {
     if (![self canGive]) {
-        LogDebug(TAG, ([NSString stringWithFormat:@"(Give) Reward is not approved by Schedule. id: %@", self.ID]));
+        LogDebug(REWARD_TAG, ([NSString stringWithFormat:@"(Give) Reward is not approved by Schedule. id: %@", self.ID]));
         return NO;
     }
 
@@ -89,7 +89,7 @@ static DictionaryFactory* dictionaryFactory;
 
 - (BOOL)take {
     if ([RewardStorage isRewardGiven:self.ID]) {
-        LogDebug(TAG, ([NSString stringWithFormat:@"Reward not give. id: %@", self.ID]));
+        LogDebug(REWARD_TAG, ([NSString stringWithFormat:@"Reward not give. id: %@", self.ID]));
         return NO;
     }
     

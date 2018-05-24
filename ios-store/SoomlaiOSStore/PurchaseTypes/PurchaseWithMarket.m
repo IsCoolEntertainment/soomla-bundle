@@ -25,7 +25,7 @@
 
 @synthesize marketItem;
 
-static NSString* TAG = @"SOOMLA PurchaseWithMarket";
+static NSString* PURCHASE_WITH_MARKET_TAG = @"SOOMLA PurchaseWithMarket";
 
 - (id)initWithProductId:(NSString*)oProductId andPrice:(double)oPrice {
     if (self = [super init]) {
@@ -45,7 +45,7 @@ static NSString* TAG = @"SOOMLA PurchaseWithMarket";
  see parent
  */
 - (void)buyWithPayload:(NSString*)payload {
-    LogDebug(TAG, ([NSString stringWithFormat:@"Starting in-app purchase for productId: %@", self.marketItem.productId]));
+    LogDebug(PURCHASE_WITH_MARKET_TAG, ([NSString stringWithFormat:@"Starting in-app purchase for productId: %@", self.marketItem.productId]));
     
     if (![[SoomlaStore getInstance] buyInMarketWithMarketItem:self.marketItem andPayload:payload]) {
         [StoreEventHandling postUnexpectedError:ERR_ID_PURCHASE_FAIL forObject:self];

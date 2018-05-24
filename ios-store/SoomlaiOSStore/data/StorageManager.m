@@ -27,7 +27,7 @@
 
 @synthesize virtualCurrencyStorage, virtualGoodStorage;
 
-static NSString* TAG = @"SOOMLA StorageManager";
+static NSString* STORAGE_MANAGER_TAG = @"SOOMLA StorageManager";
 
 + (StorageManager*)getInstance{
     static StorageManager* _instance = nil;

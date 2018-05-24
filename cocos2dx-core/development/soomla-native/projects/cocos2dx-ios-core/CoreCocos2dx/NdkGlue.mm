@@ -11,7 +11,7 @@
 @implementation NdkGlue {
 }
 
-static NSString* TAG = @"SOOMLA NdkGlue";
+static NSString* NDK_GLUE_TAG = @"SOOMLA NdkGlue";
 
 + (NdkGlue *)sharedInstance {
     static NdkGlue *sharedInstance = nil;
@@ -52,12 +52,12 @@ static NSString* TAG = @"SOOMLA NdkGlue";
                 exceptionHandler(e, parameters, retParameters);
             }
             else {
-                [self logErrorWithTag: TAG andMessage: [NSString stringWithFormat:@"Unhandled exception %@ in method %@", e, methodName]];
+                [self logErrorWithTag: NDK_GLUE_TAG andMessage: [NSString stringWithFormat:@"Unhandled exception %@ in method %@", e, methodName]];
             }
         }
     }
     else {
-        [self logErrorWithTag: TAG andMessage: [NSString stringWithFormat:@"Unsupported method %@", methodName]];
+        [self logErrorWithTag: NDK_GLUE_TAG andMessage: [NSString stringWithFormat:@"Unsupported method %@", methodName]];
     }
     return retParameters;
 }
@@ -75,7 +75,7 @@ static NSString* TAG = @"SOOMLA NdkGlue";
         callbackHandler(notification, parameters);
     }
     else {
-        [self logErrorWithTag: TAG andMessage: [NSString stringWithFormat:@"Unknown notification %@", notification.name]];
+        [self logErrorWithTag: NDK_GLUE_TAG andMessage: [NSString stringWithFormat:@"Unknown notification %@", notification.name]];
         return;
     }
 
@@ -98,7 +98,7 @@ static NSString* TAG = @"SOOMLA NdkGlue";
         jsonPrms = json_loads([jsonPrmsString UTF8String], 0, &jerror);
 
         if (!jsonPrms) {
-            [self logErrorWithTag:TAG andMessage:[NSString stringWithFormat:@"error: at line #%d: %s", jerror.line, jerror.text]];
+            [self logErrorWithTag:NDK_GLUE_TAG andMessage:[NSString stringWithFormat:@"error: at line #%d: %s", jerror.line, jerror.text]];
             return;
         }
 

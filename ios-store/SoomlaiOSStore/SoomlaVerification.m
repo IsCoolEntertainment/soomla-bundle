@@ -28,7 +28,7 @@
 
 @implementation SoomlaVerification
 
-static NSString* TAG = @"SOOMLA SoomlaVerification";
+static NSString* SOOMLA_VERIFICATION_TAG = @"SOOMLA SoomlaVerification";
 
 - (id)initWithTransaction:(SKPaymentTransaction*)t andPurchasable:(PurchasableVirtualItem*)pvi isRestored:(BOOL)isRestored {
     if (self = [super init]) {
@@ -42,7 +42,7 @@ static NSString* TAG = @"SOOMLA SoomlaVerification";
 }
 
 - (void)verifyData {
-    LogDebug(TAG, ([NSString stringWithFormat:@"verifying purchase for: %@", transaction.payment.productIdentifier]));
+    LogDebug(SOOMLA_VERIFICATION_TAG, ([NSString stringWithFormat:@"verifying purchase for: %@", transaction.payment.productIdentifier]));
     
     float version = [[[UIDevice currentDevice] systemVersion] floatValue];
 
@@ -78,7 +78,7 @@ static NSString* TAG = @"SOOMLA SoomlaVerification";
         
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
         
-        LogDebug(TAG, ([NSString stringWithFormat:@"verifying purchase on server: %@", VERIFY_URL]));
+        LogDebug(SOOMLA_VERIFICATION_TAG, ([NSString stringWithFormat:@"verifying purchase on server: %@", VERIFY_URL]));
         
         [request setURL:[NSURL URLWithString:VERIFY_URL]];
         [request setHTTPMethod:@"POST"];
@@ -91,10 +91,10 @@ static NSString* TAG = @"SOOMLA SoomlaVerification";
     } else {
         if (tryAgain) {
             tryAgain = NO;
-            LogDebug(TAG, @"Receipt not found. Refreshing...");
+            LogDebug(SOOMLA_VERIFICATION_TAG, @"Receipt not found. Refreshing...");
             [self refreshReceipt];
         } else {
-            LogError(TAG, ([NSString stringWithFormat:@"An error occured while trying to get receipt data. Stopping the purchasing process for: %@", transaction.payment.productIdentifier]));
+            LogError(SOOMLA_VERIFICATION_TAG, ([NSString stringWithFormat:@"An error occured while trying to get receipt data. Stopping the purchasing process for: %@", transaction.payment.productIdentifier]));
             [StoreEventHandling postMarketPurchaseVerification:NO forItem:purchasable andTransaction:transaction isRestored:purchaseRestored forObject:self];
         }
     }
@@ -125,7 +125,7 @@ static NSString* TAG = @"SOOMLA SoomlaVerification";
     NSString* dataStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     NSNumber* verifiedNum = nil;
     if ([dataStr isEqualToString:@""]) {
-        LogError(TAG, @"There was a problem when verifying. Got an empty response. Will try again later.");
+        LogError(SOOMLA_VERIFICATION_TAG, @"There was a problem when verifying. Got an empty response. Will try again later.");
         [StoreEventHandling postUnexpectedError:ERR_ID_VERIFICATION_FAIL forObject:self];
         return;
     }
@@ -135,7 +135,7 @@ static NSString* TAG = @"SOOMLA SoomlaVerification";
         responseDict = [SoomlaUtils jsonStringToDict:dataStr];
         verifiedNum = (NSNumber*)[responseDict objectForKey:@"verified"];
     } @catch (NSException* e) {
-        LogError(TAG, @"There was a problem when verifying when handling response.");
+        LogError(SOOMLA_VERIFICATION_TAG, @"There was a problem when verifying when handling response.");
     }
     
     BOOL verified = NO;
@@ -146,7 +146,7 @@ static NSString* TAG = @"SOOMLA SoomlaVerification";
             NSNumber* emptyResponse = (NSNumber*)[responseDict objectForKey:@"emptyResponse"];
             BOOL needRefresh = [emptyResponse boolValue];
             if (needRefresh && tryAgain) {
-                LogDebug(TAG, @"Receipt refresh needed.");
+                LogDebug(SOOMLA_VERIFICATION_TAG, @"Receipt refresh needed.");
                 tryAgain = NO;
                 [self refreshReceipt];
                 
@@ -154,7 +154,7 @@ static NSString* TAG = @"SOOMLA SoomlaVerification";
                 return;
             }
         } else {
-            LogDebug(TAG, @"purchase verified");
+            LogDebug(SOOMLA_VERIFICATION_TAG, @"purchase verified");
         }
         [StoreEventHandling postMarketPurchaseVerification:verified forItem:purchasable andTransaction:transaction isRestored:purchaseRestored forObject:self];
     } else {
@@ -163,20 +163,20 @@ static NSString* TAG = @"SOOMLA SoomlaVerification";
             @try {
                 errorMsg = [responseDict objectForKey:@"error"];
             } @catch (NSException* e) {
-                LogError(TAG, @"There was a problem when verifying when handling response.");
+                LogError(SOOMLA_VERIFICATION_TAG, @"There was a problem when verifying when handling response.");
             }
         }
         
         if ([errorMsg isEqualToString:@"ECONNRESET"]) {
-            LogError(TAG, @"It appears that the iTunes servers are down. We can't verify this receipt.");
+            LogError(SOOMLA_VERIFICATION_TAG, @"It appears that the iTunes servers are down. We can't verify this receipt.");
             if (VERIFY_ON_ITUNES_FAILURE) {
-                LogDebug(TAG, @"You decided you want to allow situations where Itunes is down for verification. finalizing the purchase now.");
+                LogDebug(SOOMLA_VERIFICATION_TAG, @"You decided you want to allow situations where Itunes is down for verification. finalizing the purchase now.");
                 [StoreEventHandling postMarketPurchaseVerification:YES forItem:purchasable andTransaction:transaction isRestored:purchaseRestored forObject:self];
                 return;
             }
         }
         
-        LogError(TAG, ([NSString stringWithFormat:@"There was a problem when verifying (%@). Will try again later.", errorMsg]));
+        LogError(SOOMLA_VERIFICATION_TAG, ([NSString stringWithFormat:@"There was a problem when verifying (%@). Will try again later.", errorMsg]));
         [StoreEventHandling postUnexpectedError:ERR_ID_VERIFICATION_TIMEOUT forObject:self];
     }
 }
@@ -185,12 +185,12 @@ static NSString* TAG = @"SOOMLA SoomlaVerification";
 #pragma mark SKRequestDelegate methods
 
 - (void)requestDidFinish:(SKRequest *)request {
-    LogDebug(TAG, @"The refresh request for a receipt completed.");
+    LogDebug(SOOMLA_VERIFICATION_TAG, @"The refresh request for a receipt completed.");
     [self verifyData];
 }
 
 - (void)request:(SKRequest *)request didFailWithError:(NSError *)error {
-    LogDebug(TAG, ([NSString stringWithFormat:@"Error trying to request receipt: %@", error]));
+    LogDebug(SOOMLA_VERIFICATION_TAG, ([NSString stringWithFormat:@"Error trying to request receipt: %@", error]));
     [StoreEventHandling postUnexpectedError:ERR_ID_VERIFICATION_FAIL forObject:self];
 }
 

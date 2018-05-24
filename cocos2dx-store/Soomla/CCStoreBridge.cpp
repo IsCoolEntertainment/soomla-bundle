@@ -23,19 +23,19 @@ namespace soomla {
 
     #define TAG "SOOMLA CCStoreBridge"
 
-    static CCStoreBridge *sInstance = nullptr;
+    static CCStoreBridge *sStoreBridgeInstance = nullptr;
 
     CCStoreBridge *CCStoreBridge::getInstance() {
-        if (!sInstance)
+        if (!sStoreBridgeInstance)
         {
             #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS) || (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
-            sInstance = new CCNativeStoreBridge();
+            sStoreBridgeInstance = new CCNativeStoreBridge();
             #else
-            sInstance = new CCStoreBridge();
+            sStoreBridgeInstance = new CCStoreBridge();
             #endif
-            sInstance->retain();
+            sStoreBridgeInstance->retain();
         }
-        return sInstance;
+        return sStoreBridgeInstance;
     }
 
     void CCStoreBridge::initShared() {

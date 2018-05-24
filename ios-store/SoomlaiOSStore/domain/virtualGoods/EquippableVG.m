@@ -28,7 +28,7 @@
 
 @synthesize equippingModel;
 
-static NSString* TAG = @"SOOMLA equippingModel";
+static NSString* EQUIPPABLE_VG_TAG = @"SOOMLA equippingModel";
 
 - (id)initWithName:(NSString *)oName andDescription:(NSString *)oDescription
          andItemId:(NSString *)oItemId andPurchaseType:(PurchaseType *)oPurchaseType andEquippingModel:(EquippingModel)oEquippingModel {
@@ -90,15 +90,15 @@ static NSString* TAG = @"SOOMLA equippingModel";
                             [equippableVG unequip];
                         }
                     } @catch (VirtualItemNotFoundException* ex) {
-                        LogError(TAG, ([NSString stringWithFormat:@"On equip, couldn't find one of the itemIds in the category. Continuing to the next one. itemId: %@", goodItemId]));
+                        LogError(EQUIPPABLE_VG_TAG, ([NSString stringWithFormat:@"On equip, couldn't find one of the itemIds in the category. Continuing to the next one. itemId: %@", goodItemId]));
                         continue;
                     } @catch (NSException* e) {
-                        LogDebug(TAG, ([NSString stringWithFormat:@"On equip, an error occured. It's a debug message b/c the VirtualGood may just not be an EquippableVG. itemId: %@", goodItemId]));
+                        LogDebug(EQUIPPABLE_VG_TAG, ([NSString stringWithFormat:@"On equip, an error occured. It's a debug message b/c the VirtualGood may just not be an EquippableVG. itemId: %@", goodItemId]));
                         continue;
                     }
                 }
             } @catch (VirtualItemNotFoundException* ex) {
-                LogError(TAG, ([NSString stringWithFormat:@"Tried to unequip all other category VirtualGoods but there was no associated category. virtual good itemId: %@", self.itemId]));
+                LogError(EQUIPPABLE_VG_TAG, ([NSString stringWithFormat:@"Tried to unequip all other category VirtualGoods but there was no associated category. virtual good itemId: %@", self.itemId]));
             }
         } else if (self.equippingModel == kGlobal) {
             NSArray* goods = [[StoreInfo getInstance] virtualGoods];

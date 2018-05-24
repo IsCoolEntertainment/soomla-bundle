@@ -23,14 +23,14 @@
 namespace soomla {
 
 
-    static CCSoomlaEventDispatcher *s_SharedInstance = NULL;
+    static CCSoomlaEventDispatcher *s_CoreEventDispatcherInstance = NULL;
 
     CCSoomlaEventDispatcher *CCSoomlaEventDispatcher::getInstance() {
-        if (!s_SharedInstance) {
-            s_SharedInstance = new CCSoomlaEventDispatcher();
+        if (!s_CoreEventDispatcherInstance) {
+            s_CoreEventDispatcherInstance = new CCSoomlaEventDispatcher();
         }
 
-        return s_SharedInstance;
+        return s_CoreEventDispatcherInstance;
     }
 
 	void CCSoomlaEventDispatcher::registerEventHandler(const char *key, std::function<void(cocos2d::__Dictionary *)> handler) {

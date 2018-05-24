@@ -40,7 +40,7 @@
 
 @synthesize virtualCategories, virtualCurrencies, virtualCurrencyPacks, virtualGoods, virtualItems, purchasableItems, goodsCategories, goodsUpgrades;
 
-static NSString* TAG = @"SOOMLA StoreInfo";
+static NSString* STORE_INFO_TAG = @"SOOMLA StoreInfo";
 static int currentAssetsVersion = 0;
 static BOOL nonConsumableMigrationNeeded = NO;
 
@@ -163,7 +163,7 @@ static BOOL nonConsumableMigrationNeeded = NO;
 }
 
 - (void)privInitializeWithIStoreAssets:(id)storeAssets {
-    LogDebug(TAG, @"Initializing StoreInfo with a given store assets.");
+    LogDebug(STORE_INFO_TAG, @"Initializing StoreInfo with a given store assets.");
     
     self.virtualGoods = [NSMutableArray arrayWithArray:[storeAssets virtualGoods]];
     self.virtualCurrencies = [NSMutableArray arrayWithArray:[storeAssets virtualCurrencies]];
@@ -209,7 +209,7 @@ static BOOL nonConsumableMigrationNeeded = NO;
     // This is only for NonConsumable balance migration to LifetimeVGs.
     // Remove this code when no longer needed.
     if (nonConsumableMigrationNeeded) {
-        LogDebug(TAG, @"NonConsumables balance migration is required. Doing it now.");
+        LogDebug(STORE_INFO_TAG, @"NonConsumables balance migration is required. Doing it now.");
         [self nonConsBalancesToLTVGs];
     }
     
@@ -232,19 +232,19 @@ static BOOL nonConsumableMigrationNeeded = NO;
 
 -(BOOL)validateStoreAssets:(id<IStoreAssets>)storeAssets {
     if (storeAssets == nil) {
-        LogError(TAG, @"The given store assets can't be null!");
+        LogError(STORE_INFO_TAG, @"The given store assets can't be null!");
         return NO;
     }
     if (![storeAssets virtualCurrencies] ||
             ![storeAssets virtualCurrencyPacks] ||
             ![storeAssets virtualGoods] ||
             ![storeAssets virtualCategories]) {
-        LogError(TAG, @"All IStoreAssets methods shouldn't return NULL-pointer references!");
+        LogError(STORE_INFO_TAG, @"All IStoreAssets methods shouldn't return NULL-pointer references!");
         return NO;
     }
     if (![self checkAssetsArrayForMarketIdDuplicates:storeAssets.virtualGoods]
             || ![self checkAssetsArrayForMarketIdDuplicates:storeAssets.virtualCurrencyPacks]) {
-        LogError(TAG, @"The given store assets has duplicates at marketItem productId!");
+        LogError(STORE_INFO_TAG, @"The given store assets has duplicates at marketItem productId!");
         return NO;
     }
     return YES;
@@ -264,12 +264,12 @@ static BOOL nonConsumableMigrationNeeded = NO;
 }
 
 - (void)setStoreAssetsJSON:(NSString*)storeMetaJSON withVersion:(int)version {
-    LogDebug(TAG, ([NSString stringWithFormat:@"trying to set json: %@", storeMetaJSON]));
+    LogDebug(STORE_INFO_TAG, ([NSString stringWithFormat:@"trying to set json: %@", storeMetaJSON]));
     currentAssetsVersion = version;
     if (![self loadFromDB]) {
         
         if (![self fromJSONString: storeMetaJSON]) {
-            LogError(TAG, @"Couldn't load from store meta json.");
+            LogError(STORE_INFO_TAG, @"Couldn't load from store meta json.");
             return;
         }
         [self save];
@@ -359,7 +359,7 @@ static BOOL nonConsumableMigrationNeeded = NO;
         
         return YES;
     } @catch (NSException* ex) {
-        LogError(TAG, @"An error occured while trying to parse store info JSON.");
+        LogError(STORE_INFO_TAG, @"An error occured while trying to parse store info JSON.");
     }
     return NO;
 }
@@ -371,19 +371,19 @@ static BOOL nonConsumableMigrationNeeded = NO;
     NSString* storeInfoJSON = [KeyValueStorage getValueForKey:key];
     
     if(!storeInfoJSON || [storeInfoJSON length] == 0){
-        LogDebug(TAG, @"store json is not in DB yet.")
+        LogDebug(STORE_INFO_TAG, @"store json is not in DB yet.")
         return NO;
     }
     
     // This is done in case old versions of the DB exist (especially from
     // Cocos2dx) which used jsonType instead of className
     if ([storeInfoJSON rangeOfString:@"jsonType"].location != NSNotFound) {
-        LogDebug(TAG, @"the StoreInfo JSON is from an older version. we need to delete and let it be recreated.");
+        LogDebug(STORE_INFO_TAG, @"the StoreInfo JSON is from an older version. we need to delete and let it be recreated.");
         [KeyValueStorage deleteValueForKey:key];
         return NO;
     }
     
-    LogDebug(TAG, ([NSString stringWithFormat:@"the metadata-economy json (from DB) is %@", storeInfoJSON]));
+    LogDebug(STORE_INFO_TAG, ([NSString stringWithFormat:@"the metadata-economy json (from DB) is %@", storeInfoJSON]));
     
     return ([self fromJSONString:storeInfoJSON]);
 }

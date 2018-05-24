@@ -30,7 +30,7 @@
 
 @synthesize recurrence, timeRanges, activationLimit;
 
-static NSString* TAG = @"SOOMLA Schedule";
+static NSString* SCHEDULE_TAG = @"SOOMLA Schedule";
 
 + (Schedule*)Once {
     return [[Schedule alloc] initWithActivationLimit:1];
@@ -120,17 +120,17 @@ static NSString* TAG = @"SOOMLA Schedule";
     NSDate* now = [NSDate date];
     
     if (activationLimit < 1 && (!timeRanges || [timeRanges count] == 0)) {
-        LogDebug(TAG, @"There's no activation limit and no TimeRanges. APPROVED!");
+        LogDebug(SCHEDULE_TAG, @"There's no activation limit and no TimeRanges. APPROVED!");
         return YES;
     }
     
     if (activationLimit>0 && activationTimes >= activationLimit) {
-        LogDebug(TAG, @"Activation limit exceeded.");
+        LogDebug(SCHEDULE_TAG, @"Activation limit exceeded.");
         return NO;
     }
     
     if ((!timeRanges || [timeRanges count] == 0)) {
-        LogDebug(TAG, @"We have an activation limit that was not reached. Also, we don't have any time ranges. APPROVED!");
+        LogDebug(SCHEDULE_TAG, @"We have an activation limit that was not reached. Also, we don't have any time ranges. APPROVED!");
         return YES;
     }
     
@@ -139,7 +139,7 @@ static NSString* TAG = @"SOOMLA Schedule";
     
     for(DateTimeRange* dtr in timeRanges) {
         if (([now compare:dtr.start] == NSOrderedDescending) && ([now compare:dtr.end] == NSOrderedAscending)) {
-            LogDebug(TAG, @"We are just in one of the time spans, it can't get any better then that. APPROVED!");
+            LogDebug(SCHEDULE_TAG, @"We are just in one of the time spans, it can't get any better then that. APPROVED!");
             return YES;
         }
     }
@@ -158,37 +158,37 @@ static NSString* TAG = @"SOOMLA Schedule";
         
         if (nowComponents.minute >= startComponents.minute &&
             nowComponents.minute <= endComponents.minute) {
-            LogDebug(TAG, @"Now is in one of the time ranges' minutes span.");
+            LogDebug(SCHEDULE_TAG, @"Now is in one of the time ranges' minutes span.");
             
             if (recurrence == EVERY_HOUR) {
-                LogDebug(TAG, @"It's a EVERY_HOUR recurrence. APPROVED!");
+                LogDebug(SCHEDULE_TAG, @"It's a EVERY_HOUR recurrence. APPROVED!");
                 return YES;
             }
             
             if (nowComponents.hour >= startComponents.hour &&
                 nowComponents.hour <= endComponents.hour) {
-                LogDebug(TAG, @"Now is in one of the time ranges' hours span.");
+                LogDebug(SCHEDULE_TAG, @"Now is in one of the time ranges' hours span.");
                 
                 if (recurrence == EVERY_DAY) {
-                    LogDebug(TAG, @"It's a EVERY_DAY recurrence. APPROVED!");
+                    LogDebug(SCHEDULE_TAG, @"It's a EVERY_DAY recurrence. APPROVED!");
                     return YES;
                 }
                 
                 if (nowComponents.weekday >= startComponents.weekday
                     && nowComponents.weekday <= endComponents.weekday) {
-                    LogDebug(TAG, @"Now is in one of the time ranges' day-of-week span.");
+                    LogDebug(SCHEDULE_TAG, @"Now is in one of the time ranges' day-of-week span.");
                     
                     if (recurrence == EVERY_WEEK) {
-                        LogDebug(TAG, @"It's a EVERY_WEEK recurrence. APPROVED!");
+                        LogDebug(SCHEDULE_TAG, @"It's a EVERY_WEEK recurrence. APPROVED!");
                         return YES;
                     }
                     
                     if (nowComponents.day >= startComponents.day
                         && nowComponents.day <= endComponents.day) {
-                        LogDebug(TAG, @"Now is in one of the time ranges' days span.");
+                        LogDebug(SCHEDULE_TAG, @"Now is in one of the time ranges' days span.");
                         
                         if (recurrence == EVERY_MONTH) {
-                            LogDebug(TAG, @"It's a EVERY_MONTH recurrence. APPROVED!");
+                            LogDebug(SCHEDULE_TAG, @"It's a EVERY_MONTH recurrence. APPROVED!");
                             return YES;
                         }
                     }

@@ -28,7 +28,7 @@
 
 @synthesize currencyAmount, currencyItemId;
 
-static NSString* TAG = @"SOOMLA VirtualCurrencyPack";
+static NSString* VIRTUAL_CURRENCY_PACK_TAG = @"SOOMLA VirtualCurrencyPack";
 
 - (id)initWithName:(NSString*)oName andDescription:(NSString*)oDescription
             andItemId:(NSString*)oItemId andCurrencyAmount:(int)oCurrencyAmount andCurrency:(NSString*)oCurrencyItemId
@@ -71,7 +71,7 @@ static NSString* TAG = @"SOOMLA VirtualCurrencyPack";
     @try {
         currency = (VirtualCurrency*)[[StoreInfo getInstance] virtualItemWithId:self.currencyItemId];
     } @catch (VirtualItemNotFoundException* ex) {
-        LogError(TAG, ([NSString stringWithFormat:@"VirtualCurrency with itemId: %@ doesn't exist! Can't give this pack.", self.currencyItemId]));
+        LogError(VIRTUAL_CURRENCY_PACK_TAG, ([NSString stringWithFormat:@"VirtualCurrency with itemId: %@ doesn't exist! Can't give this pack.", self.currencyItemId]));
         return 0;
     }
     return [[[StorageManager getInstance] virtualCurrencyStorage] addAmount:amount*self.currencyAmount toItem:currency.itemId withEvent:notify];
@@ -88,7 +88,7 @@ static NSString* TAG = @"SOOMLA VirtualCurrencyPack";
     @try {
         currency = (VirtualCurrency*)[[StoreInfo getInstance] virtualItemWithId:self.currencyItemId];
     } @catch (VirtualItemNotFoundException* ex) {
-        LogError(TAG, ([NSString stringWithFormat:@"VirtualCurrency with itemId: %@ doesn't exist! Can't take this pack.", self.currencyItemId]));
+        LogError(VIRTUAL_CURRENCY_PACK_TAG, ([NSString stringWithFormat:@"VirtualCurrency with itemId: %@ doesn't exist! Can't take this pack.", self.currencyItemId]));
         return 0;
     }
     return [[[StorageManager getInstance] virtualCurrencyStorage] removeAmount:amount*self.currencyAmount fromItem:currency.itemId withEvent:notify];
@@ -102,7 +102,7 @@ static NSString* TAG = @"SOOMLA VirtualCurrencyPack";
  */
 - (int)resetBalance:(int)balance withEvent:(BOOL)notify {
     // Not supported for VirtualCurrencyPacks !
-    LogError(TAG, @"Someone tried to reset balance of CurrencyPack. That's not right.");
+    LogError(VIRTUAL_CURRENCY_PACK_TAG, @"Someone tried to reset balance of CurrencyPack. That's not right.");
     return 0;
 }
 
