@@ -13,6 +13,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
+#ifndef SOOMLA_IOS_STORE_VIRTUAL_ITEM_STORAGE_H
+#define SOOMLA_IOS_STORE_VIRTUAL_ITEM_STORAGE_H
 
 #import <Foundation/Foundation.h>
 
@@ -84,3 +86,4 @@
 - (void)postBalanceChangeToItem:(NSString*)itemId withBalance:(int)balance andAmountAdded:(int)amountAdded;
 
 @end
+#endif

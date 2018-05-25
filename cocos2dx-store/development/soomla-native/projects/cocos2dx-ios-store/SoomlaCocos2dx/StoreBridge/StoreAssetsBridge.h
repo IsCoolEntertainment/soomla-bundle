@@ -1,7 +1,8 @@
 //
 
 //
-
+#ifndef SOOMLA_COCOS2DX_IOS_STORE_STORE_ASSETS_BRIDGE_H
+#define SOOMLA_COCOS2DX_IOS_STORE_STORE_ASSETS_BRIDGE_H
 
 #import <Foundation/Foundation.h>
 #include "IStoreAssets.h"
@@ -18,3 +19,4 @@
 - (void)initializeWithStoreAssetsDict:(NSDictionary*)storeAssetsDict andVersion:(int)oVersion;
 
 @end
+#endif

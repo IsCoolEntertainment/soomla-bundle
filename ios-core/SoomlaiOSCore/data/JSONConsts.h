@@ -13,6 +13,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
+#ifndef SOOMLA_IOS_CORE_JSON_CONSTS_H
+#define SOOMLA_IOS_CORE_JSON_CONSTS_H
 
 #import <Foundation/Foundation.h>
 
@@ -36,3 +38,5 @@ extern NSString *const SOOM_SCHE_RANGES;
 extern NSString *const SOOM_SCHE_RANGE_START;
 extern NSString *const SOOM_SCHE_RANGE_END;
 extern NSString *const SOOM_SCHE_APPROVALS;
+
+#endif

@@ -13,6 +13,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
+#ifndef SOOMLA_IOS_STORE_VIRTUAL_ITEM_NOT_FOUND_EXCEPTION_H
+#define SOOMLA_IOS_STORE_VIRTUAL_ITEM_NOT_FOUND_EXCEPTION_H
 
 #import <Foundation/Foundation.h>
 
@@ -30,3 +32,4 @@
 - (id)initWithLookupField:(NSString*)lookupField andLookupValue:(NSString*)lookupVal;
 
 @end
+#endif

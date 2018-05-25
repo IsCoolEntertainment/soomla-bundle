@@ -1,3 +1,5 @@
+#ifndef SOOMLA_COCOS2DX_IOS_CORE_NDK_GLUE_H
+#define SOOMLA_COCOS2DX_IOS_CORE_NDK_GLUE_H
 
 #import <Foundation/Foundation.h>
 
@@ -11,3 +13,5 @@
 - (NSObject *)dispatchNdkCall:(NSDictionary *)parameters;
 - (void)dispatchNdkCallback:(NSNotification*)notification;
 @end
+
+#endif

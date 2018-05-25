@@ -13,6 +13,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
+#ifndef SOOMLA_IOS_STORE_SINGLE_USE_PACK_VG_H
+#define SOOMLA_IOS_STORE_SINGLE_USE_PACK_VG_H
 
 #include "domain/virtualGoods/VirtualGood.h"
 
@@ -59,3 +61,4 @@
 - (id)initWithName:(NSString *)oName andDescription:(NSString *)oDescription andItemId:(NSString *)oItemId andPurchaseType:(PurchaseType *)oPurchaseType andSingleUseGood:(NSString*)oGoodItemId andAmount:(int)oAmount;
 
 @end
+#endif

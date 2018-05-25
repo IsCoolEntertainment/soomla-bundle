@@ -5,6 +5,8 @@
 //  Created by Gur Dotan on 6/2/14.
 //  Copyright (c) 2014 Soomla. All rights reserved.
 //
+#ifndef SOOMLA_IOS_CORE_SOOMLA_EVENT_HANDLING_H
+#define SOOMLA_IOS_CORE_SOOMLA_EVENT_HANDLING_H
 
 @class Reward;
 
@@ -27,3 +29,4 @@
 + (void)postCustomEventWithName:(NSString*)name andExtraInfo:(NSDictionary*)extra;
 
 @end
+#endif

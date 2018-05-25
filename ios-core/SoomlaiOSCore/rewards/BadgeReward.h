@@ -13,6 +13,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
+#ifndef SOOMLA_IOS_CORE_BADGE_REWARD_H
+#define SOOMLA_IOS_CORE_BADGE_REWARD_H
 
 #include "rewards/Reward.h"
 
@@ -28,3 +30,5 @@
 - (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName andIconUrl:(NSString *)oIconUrl;
 
 @end
+
+#endif

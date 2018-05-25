@@ -1,3 +1,5 @@
+#ifndef SOOMLA_COCOS2DX_IOS_CORE_DOMAIN_HELPER_H
+#define SOOMLA_COCOS2DX_IOS_CORE_DOMAIN_HELPER_H
 
 #import <Foundation/Foundation.h>
 
@@ -9,3 +11,5 @@
 - (id) getDictListFromDomains: (NSArray *)domains;
 - (NSDictionary *) domainToDict: (NSObject *)domain;
 @end
+
+#endif

@@ -13,6 +13,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
+#ifndef SOOMLA_IOS_STORE_VIRTUAL_CURRENCY_STORAGE_H
+#define SOOMLA_IOS_STORE_VIRTUAL_CURRENCY_STORAGE_H
 
 #import <Foundation/Foundation.h>
 #include "data/VirtualItemStorage.h"
@@ -29,3 +31,4 @@
 - (id)init;
 
 @end
+#endif

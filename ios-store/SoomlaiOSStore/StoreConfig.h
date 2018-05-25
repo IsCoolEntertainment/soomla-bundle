@@ -13,6 +13,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
+#ifndef SOOMLA_IOS_STORE_STORE_CONFIG_H
+#define SOOMLA_IOS_STORE_STORE_CONFIG_H
 
 /**
  This file holds the store's configurations.
@@ -41,3 +43,4 @@ extern BOOL VERIFY_PURCHASES;
 extern BOOL VERIFY_ON_ITUNES_FAILURE;
 
 extern NSString* VERIFY_URL;
+#endif

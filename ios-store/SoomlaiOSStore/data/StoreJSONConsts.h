@@ -13,6 +13,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
+#ifndef SOOMLA_IOS_STORE_STORE_JSON_CONSTS_H
+#define SOOMLA_IOS_STORE_STORE_JSON_CONSTS_H
 
 /**
  This class contains all static const String names of the keys/vals in the
@@ -71,3 +73,4 @@ extern NSString *const JSON_PURCHASE_VI_AMOUNT;
 extern NSString *const VIR_ASSOCITEMID;
 extern NSString *const VIR_AMOUNT;
 
+#endif

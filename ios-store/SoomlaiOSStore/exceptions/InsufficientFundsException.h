@@ -13,6 +13,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
+#ifndef SOOMLA_IOS_STORE_INSUFFICIENT_FUNDS_EXCEPTION_H
+#define SOOMLA_IOS_STORE_INSUFFICIENT_FUNDS_EXCEPTION_H
 
 #import <Foundation/Foundation.h>
 
@@ -44,4 +46,4 @@
 
 @end
 
-
+#endif

@@ -13,7 +13,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
-
+#ifndef SOOMLA_IOS_STORE_STORE_INVENTORY_H
+#define SOOMLA_IOS_STORE_STORE_INVENTORY_H
 #import <Foundation/Foundation.h>
 
 /**
@@ -210,3 +211,4 @@
 + (BOOL)resetAllItemsBalances:(NSDictionary *)replaceBalances;
 
 @end
+#endif

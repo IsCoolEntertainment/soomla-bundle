@@ -13,6 +13,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
+#ifndef SOOMLA_IOS_CORE_SOOMLA_UTILS_H
+#define SOOMLA_IOS_CORE_SOOMLA_UTILS_H
 
 #import <Foundation/Foundation.h>
 
@@ -60,3 +62,5 @@
 + (BOOL)isEmpty:(NSString *)target;
 
 @end
+
+#endif

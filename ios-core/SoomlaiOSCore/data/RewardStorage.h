@@ -13,6 +13,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
+#ifndef SOOMLA_IOS_CORE_REWARD_STORAGE_H
+#define SOOMLA_IOS_CORE_REWARD_STORAGE_H
 
 @class Reward;
 @class SequenceReward;
@@ -46,3 +48,4 @@
 + (BOOL)resetRewardsState:(NSDictionary *)state;
 
 @end
+#endif

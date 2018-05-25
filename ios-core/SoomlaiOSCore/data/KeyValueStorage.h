@@ -13,6 +13,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
+#ifndef SOOMLA_IOS_CORE_KEY_VALUE_STORAGE_H
+#define SOOMLA_IOS_CORE_KEY_VALUE_STORAGE_H
 
 #import <Foundation/Foundation.h>
 
@@ -245,3 +247,4 @@
 - (void)purge;
 
 @end
+#endif

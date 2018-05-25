@@ -13,6 +13,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
+#ifndef SOOMLA_IOS_CORE_SOOMLA_H
+#define SOOMLA_IOS_CORE_SOOMLA_H
 
 #import <Foundation/Foundation.h>
 
@@ -23,3 +25,4 @@ extern NSString* SOOMLA_SECRET;
 + (void)initializeWithSecret:(NSString *)secret;
 
 @end
+#endif

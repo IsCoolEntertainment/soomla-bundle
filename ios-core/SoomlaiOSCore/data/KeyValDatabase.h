@@ -13,6 +13,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
+#ifndef SOOMLA_IOS_CORE_KEY_VAL_DATABASE_H
+#define SOOMLA_IOS_CORE_KEY_VAL_DATABASE_H
 
 #import <Foundation/Foundation.h>
 
@@ -37,3 +39,5 @@
 + (NSString*) keyMetaStoreInfo;
 
 @end
+
+#endif

@@ -13,6 +13,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
+#ifndef SOOMLA_COCOS2DX_IOS_STORE_STORE_TYPE_CONSTS_H
+#define SOOMLA_COCOS2DX_IOS_STORE_STORE_TYPE_CONSTS_H
 
 @interface StoreTypeConsts : NSObject
 
@@ -29,3 +31,4 @@ extern const NSString *const JSON_JSON_TYPE_UPGRADE_VG;
 extern const NSString *const JSON_JSON_TYPE_ITEM;
 
 @end
+#endif

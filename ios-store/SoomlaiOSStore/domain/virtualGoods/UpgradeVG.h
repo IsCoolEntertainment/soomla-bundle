@@ -13,7 +13,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
-
+#ifndef SOOMLA_IOS_STORE_UPGRADE_VG_H
+#define SOOMLA_IOS_STORE_UPGRADE_VG_H
 #include "domain/virtualGoods/LifetimeVG.h"
 
 /**
@@ -71,3 +72,4 @@
 - (id)initWithName:(NSString *)oName andDescription:(NSString *)oDescription andItemId:(NSString *)oItemId andPurchaseType:(PurchaseType *)oPurchaseType andLinkedGood:(NSString*)oGoodItemId andPreviousUpgrade:(NSString*)oPrevItemId andNextUpgrade:(NSString*)oNextItemId;
 
 @end
+#endif

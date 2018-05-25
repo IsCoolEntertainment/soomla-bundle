@@ -13,6 +13,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
+#ifndef SOOMLA_IOS_STORE_SOOMLA_STORE_H
+#define SOOMLA_IOS_STORE_SOOMLA_STORE_H
 
 #import <Foundation/Foundation.h>
 #import <StoreKit/StoreKit.h>
@@ -92,3 +94,4 @@
 - (void)loadBillingService;
 
 @end
+#endif

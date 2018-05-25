@@ -13,7 +13,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
-
+#ifndef SOOMLA_IOS_STORE_STORE_EVENT_HANDLING_H
+#define SOOMLA_IOS_STORE_STORE_EVENT_HANDLING_H
 
 #import <UIKit/UIKit.h>
 #import <StoreKit/StoreKit.h>
@@ -138,3 +139,4 @@
 + (void)postSoomlaStoreInitialized;
 
 @end
+#endif

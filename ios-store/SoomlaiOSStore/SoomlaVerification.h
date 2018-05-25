@@ -13,6 +13,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
+#ifndef SOOMLA_IOS_STORE_SOOMLA_VERIFICATION_H
+#define SOOMLA_IOS_STORE_SOOMLA_VERIFICATION_H
 
 #import <Foundation/Foundation.h>
 #import <StoreKit/StoreKit.h>
@@ -31,3 +33,4 @@
 - (void)verifyData;
 
 @end
+#endif

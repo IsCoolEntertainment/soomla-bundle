@@ -13,6 +13,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
+#ifndef SOOMLA_IOS_CORE_SOOMLA_CONFIG_H
+#define SOOMLA_IOS_CORE_SOOMLA_CONFIG_H
 
 #include <Foundation/Foundation.h>
 
@@ -30,6 +32,4 @@ extern BOOL DEBUG_LOG;
 
 extern NSString* DB_KEY_PREFIX;
 
-
-
-
+#endif

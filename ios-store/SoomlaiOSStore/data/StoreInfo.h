@@ -13,6 +13,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
+#ifndef SOOMLA_IOS_STORE_STORE_INFO_H
+#define SOOMLA_IOS_STORE_STORE_INFO_H
 
 #import <Foundation/Foundation.h>
 #include "IStoreAssets.h"
@@ -207,3 +209,5 @@
  */
 - (void)replaceVirtualItem:(VirtualItem*)virtualItem;
 @end
+
+#endif

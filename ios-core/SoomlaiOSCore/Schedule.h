@@ -5,6 +5,8 @@
 //  Created by Refael Dakar on 06/08/14.
 //  Copyright (c) 2014 SOOMLA. All rights reserved.
 //
+#ifndef SOOMLA_IOS_CORE_SCHEDULE_H
+#define SOOMLA_IOS_CORE_SCHEDULE_H
 
 #import <Foundation/Foundation.h>
 
@@ -54,4 +56,4 @@ typedef NS_ENUM(NSInteger, Recurrence) {
 
 @end
 
-
+#endif

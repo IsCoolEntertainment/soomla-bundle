@@ -13,6 +13,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
+#ifndef SOOMLA_IOS_STORE_NOT_ENOUGH_GOODS_EXCEPTION_H
+#define SOOMLA_IOS_STORE_NOT_ENOUGH_GOODS_EXCEPTION_H
 
 #import <Foundation/Foundation.h>
 
@@ -37,3 +39,5 @@
 - (id)initWithItemId:(NSString*)itemId;
 
 @end
+
+#endif

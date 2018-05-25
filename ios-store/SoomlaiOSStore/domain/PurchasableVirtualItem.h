@@ -13,6 +13,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
+#ifndef SOOMLA_IOS_STORE_PURCHASABLE_VIRTUAL_ITEM_H
+#define SOOMLA_IOS_STORE_PURCHASABLE_VIRTUAL_ITEM_H
 
 #include "domain/VirtualItem.h"
 
@@ -73,3 +75,5 @@
 - (BOOL)canBuy;
 
 @end
+
+#endif
