@@ -18,8 +18,8 @@
 #define __CCRewardStorage_H_
 
 #include "cocos2d.h"
-#include "CCReward.h"
-#include "CCSequenceReward.h"
+#include "rewards/CCReward.h"
+#include "rewards/CCSequenceReward.h"
 
 namespace soomla {
     class CCRewardStorage: public cocos2d::Ref {

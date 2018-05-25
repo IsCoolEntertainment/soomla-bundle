@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 SOOMLA. All rights reserved.
 //
 
-#import "StoreTypeConsts.h"
+#include "StoreTypeConsts.h"
 
 @implementation StoreTypeConsts {
 }

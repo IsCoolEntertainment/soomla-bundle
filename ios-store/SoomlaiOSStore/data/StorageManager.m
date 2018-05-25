@@ -14,13 +14,13 @@
  limitations under the License.
  */
 
-#import "StorageManager.h"
-#import "VirtualCurrencyStorage.h"
-#import "VirtualGoodStorage.h"
-#import "VirtualItemStorage.h"
-#import "VirtualItem.h"
-#import "VirtualGood.h"
-#import "VirtualCurrency.h"
+#include "data/StorageManager.h"
+#include "data/VirtualCurrencyStorage.h"
+#include "data/VirtualGoodStorage.h"
+#include "data/VirtualItemStorage.h"
+#include "domain/VirtualItem.h"
+#include "domain/virtualGoods/VirtualGood.h"
+#include "domain/virtualCurrencies/VirtualCurrency.h"
 
 
 @implementation StorageManager

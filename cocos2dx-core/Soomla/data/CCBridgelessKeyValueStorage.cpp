@@ -16,7 +16,7 @@
 
 #include "base/CCUserDefault.h"
 
-#include "CCBridgelessKeyValueStorage.h"
+#include "data/CCBridgelessKeyValueStorage.h"
 
 namespace soomla {
     

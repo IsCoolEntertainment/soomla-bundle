@@ -14,15 +14,15 @@
  limitations under the License.
  */
 
-#import "EquippableVG.h"
-#import "StoreJSONConsts.h"
-#import "StorageManager.h"
-#import "VirtualGoodStorage.h"
-#import "NotEnoughGoodsException.h"
-#import "VirtualItemNotFoundException.h"
-#import "SoomlaUtils.h"
-#import "VirtualCategory.h"
-#import "StoreInfo.h"
+#include "domain/virtualGoods/EquippableVG.h"
+#include "data/StoreJSONConsts.h"
+#include "data/StorageManager.h"
+#include "data/VirtualGoodStorage.h"
+#include "exceptions/NotEnoughGoodsException.h"
+#include "exceptions/VirtualItemNotFoundException.h"
+#include "SoomlaUtils.h"
+#include "domain/VirtualCategory.h"
+#include "data/StoreInfo.h"
 
 @implementation EquippableVG
 

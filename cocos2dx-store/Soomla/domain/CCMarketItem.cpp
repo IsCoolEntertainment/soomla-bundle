@@ -16,7 +16,7 @@
 
 
 
-#include "CCMarketItem.h"
+#include "domain/CCMarketItem.h"
 
 
 namespace soomla {

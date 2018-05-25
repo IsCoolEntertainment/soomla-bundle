@@ -16,10 +16,10 @@
 
 #include "CCStoreInventory.h"
 #include "CCSoomlaUtils.h"
-#include "CCStoreInfo.h"
-#include "CCPurchasableVirtualItem.h"
-#include "CCVirtualCurrencyStorage.h"
-#include "CCVirtualGoodsStorage.h"
+#include "data/CCStoreInfo.h"
+#include "domain/CCPurchasableVirtualItem.h"
+#include "data/CCVirtualCurrencyStorage.h"
+#include "data/CCVirtualGoodsStorage.h"
 #include "CCSoomlaEventDispatcher.h"
 
 namespace soomla {

@@ -16,7 +16,7 @@
 
 #import <Foundation/Foundation.h>
 #import <StoreKit/StoreKit.h>
-#import "IStoreAssets.h"
+#include "IStoreAssets.h"
 
 @class MarketItem;
 @class PurchasableVirtualItem;

@@ -2,7 +2,7 @@
 #ifndef __CCVirtualItemReward_H_
 #define __CCVirtualItemReward_H_
 
-#include "CCReward.h"
+#include "rewards/CCReward.h"
 #include "CCCoreConsts.h"
 #include "CCStoreConsts.h"
 

@@ -20,7 +20,7 @@
 #include "cocos2d.h"
 #include "CCSoomlaMacros.h"
 #include "CCCoreConsts.h"
-#include "CCReward.h"
+#include "rewards/CCReward.h"
 
 namespace soomla {
     class CCAggregateReward : public CCReward {

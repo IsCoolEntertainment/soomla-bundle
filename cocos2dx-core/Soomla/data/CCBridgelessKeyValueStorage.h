@@ -17,7 +17,7 @@
 #ifndef __CCBridgelessKeyValueStorage_H
 #define __CCBridgelessKeyValueStorage_H
 
-#include "CCKeyValueStorage.h"
+#include "data/CCKeyValueStorage.h"
 
 
 

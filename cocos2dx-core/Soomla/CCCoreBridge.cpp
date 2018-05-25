@@ -16,12 +16,12 @@
 
 #include "CCCoreBridge.h"
 #include "CCDomainFactory.h"
-#include "CCBadgeReward.h"
-#include "CCRandomReward.h"
-#include "CCSequenceReward.h"
+#include "rewards/CCBadgeReward.h"
+#include "rewards/CCRandomReward.h"
+#include "rewards/CCSequenceReward.h"
 #include "CCCoreEventDispatcher.h"
 #include "CCSoomlaUtils.h"
-#include "CCNativeCoreBridge.h"
+#include "NativeImpl/CCNativeCoreBridge.h"
 
 namespace soomla {
 

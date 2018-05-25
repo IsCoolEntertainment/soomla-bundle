@@ -14,13 +14,13 @@
  limitations under the License.
  */
 
-#import "UpgradeVG.h"
-#import "StoreJSONConsts.h"
-#import "StorageManager.h"
-#import "VirtualGoodStorage.h"
-#import "SoomlaUtils.h"
-#import "StoreInfo.h"
-#import "VirtualItemNotFoundException.h"
+#include "domain/virtualGoods/UpgradeVG.h"
+#include "data/StoreJSONConsts.h"
+#include "data/StorageManager.h"
+#include "data/VirtualGoodStorage.h"
+#include "SoomlaUtils.h"
+#include "data/StoreInfo.h"
+#include "exceptions/VirtualItemNotFoundException.h"
 
 @implementation UpgradeVG
 

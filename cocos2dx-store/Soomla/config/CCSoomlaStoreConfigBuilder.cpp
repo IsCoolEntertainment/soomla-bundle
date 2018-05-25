@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#include "CCSoomlaStoreConfigBuilder.h"
+#include "config/CCSoomlaStoreConfigBuilder.h"
 
 namespace soomla
 {

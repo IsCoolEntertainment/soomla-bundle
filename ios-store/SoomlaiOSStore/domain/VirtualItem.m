@@ -14,9 +14,9 @@
  limitations under the License.
  */
 
-#import "VirtualItem.h"
-#import "StoreJSONConsts.h"
-#import "StoreInfo.h"
+#include "domain/VirtualItem.h"
+#include "data/StoreJSONConsts.h"
+#include "data/StoreInfo.h"
 
 @implementation VirtualItem
 

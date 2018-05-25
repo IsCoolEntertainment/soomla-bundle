@@ -19,7 +19,7 @@
 
 #include "cocos2d.h"
 #include "CCSoomlaMacros.h"
-#include "CCReward.h"
+#include "rewards/CCReward.h"
 
 namespace soomla {
     class CCBadgeReward : public CCReward {

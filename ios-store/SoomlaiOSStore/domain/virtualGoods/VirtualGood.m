@@ -14,9 +14,9 @@
  limitations under the License.
  */
 
-#import "VirtualGood.h"
-#import "StorageManager.h"
-#import "VirtualGoodStorage.h"
+#include "domain/virtualGoods/VirtualGood.h"
+#include "data/StorageManager.h"
+#include "data/VirtualGoodStorage.h"
 
 @implementation VirtualGood
 

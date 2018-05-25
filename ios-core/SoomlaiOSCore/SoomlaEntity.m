@@ -14,9 +14,9 @@
  limitations under the License.
  */
 
-#import "SoomlaEntity.h"
-#import "JSONConsts.h"
-#import "SoomlaUtils.h"
+#include "SoomlaEntity.h"
+#include "data/JSONConsts.h"
+#include "SoomlaUtils.h"
 
 @implementation SoomlaEntity
 

@@ -19,10 +19,10 @@
 #ifndef __CCUpgradeVG_H_
 #define __CCUpgradeVG_H_
 
-#include "CCVirtualGood.h"
+#include "domain/virtualGoods/CCVirtualGood.h"
 #include "CCSoomlaMacros.h"
 #include "CCStoreConsts.h"
-#include "CCLifetimeVG.h"
+#include "domain/virtualGoods/CCLifetimeVG.h"
 
 namespace soomla {
     

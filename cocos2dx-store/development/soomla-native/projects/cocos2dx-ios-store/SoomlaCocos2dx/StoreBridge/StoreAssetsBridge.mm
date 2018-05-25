@@ -3,17 +3,17 @@
 //
 
 
-#import "StoreAssetsBridge.h"
-#import "SoomlaUtils.h"
-#import "VirtualCurrency.h"
-#import "VirtualCurrencyPack.h"
-#import "SingleUseVG.h"
-#import "LifetimeVG.h"
-#import "EquippableVG.h"
-#import "UpgradeVG.h"
-#import "SingleUsePackVG.h"
-#import "VirtualCategory.h"
-#import "StoreJSONConsts.h"
+#include "StoreAssetsBridge.h"
+#include "SoomlaUtils.h"
+#include "domain/virtualCurrencies/VirtualCurrency.h"
+#include "domain/virtualCurrencies/VirtualCurrencyPack.h"
+#include "domain/virtualGoods/SingleUseVG.h"
+#include "domain/virtualGoods/LifetimeVG.h"
+#include "domain/virtualGoods/EquippableVG.h"
+#include "domain/virtualGoods/UpgradeVG.h"
+#include "domain/virtualGoods/SingleUsePackVG.h"
+#include "domain/VirtualCategory.h"
+#include "data/StoreJSONConsts.h"
 
 
 @implementation StoreAssetsBridge

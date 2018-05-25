@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#include "CCSoomlaEntity.h"
+#include "domain/CCSoomlaEntity.h"
 #include "CCSoomlaUtils.h"
 #include "CCDomainFactory.h"
 

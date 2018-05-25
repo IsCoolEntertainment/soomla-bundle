@@ -20,10 +20,10 @@
 #define __CCVirtualItem_H__
 
 #include "cocos2d.h"
-#include "CCDomain.h"
+#include "domain/CCDomain.h"
 #include "CCStoreConsts.h"
 #include "CCSoomlaMacros.h"
-#include "CCSoomlaEntity.h"
+#include "domain/CCSoomlaEntity.h"
 #include "CCError.h"
 
 namespace soomla {

@@ -14,15 +14,15 @@
  limitations under the License.
  */
 
-#import "PurchasableVirtualItem.h"
-#import "PurchaseType.h"
-#import "StoreJSONConsts.h"
-#import "PurchaseWithMarket.h"
-#import "PurchaseWithVirtualItem.h"
-#import "MarketItem.h"
-#import "VirtualItem.h"
-#import "SoomlaUtils.h"
-#import "VirtualItemNotFoundException.h"
+#include "domain/PurchasableVirtualItem.h"
+#include "PurchaseTypes/PurchaseType.h"
+#include "data/StoreJSONConsts.h"
+#include "PurchaseTypes/PurchaseWithMarket.h"
+#include "PurchaseTypes/PurchaseWithVirtualItem.h"
+#include "domain/MarketItem.h"
+#include "domain/VirtualItem.h"
+#include "SoomlaUtils.h"
+#include "exceptions/VirtualItemNotFoundException.h"
 
 @implementation PurchasableVirtualItem
 

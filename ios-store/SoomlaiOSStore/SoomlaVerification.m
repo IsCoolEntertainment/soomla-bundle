@@ -14,11 +14,11 @@
  limitations under the License.
  */
 
-#import "SoomlaVerification.h"
-#import "SoomlaUtils.h"
-#import "PurchasableVirtualItem.h"
-#import "StoreEventHandling.h"
-#import "StoreConfig.h"
+#include "SoomlaVerification.h"
+#include "SoomlaUtils.h"
+#include "domain/PurchasableVirtualItem.h"
+#include "StoreEventHandling.h"
+#include "StoreConfig.h"
 
 @interface SoomlaVerification () <NSURLConnectionDelegate, SKRequestDelegate> {
     BOOL tryAgain;

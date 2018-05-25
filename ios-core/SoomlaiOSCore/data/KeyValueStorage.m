@@ -14,12 +14,12 @@
  limitations under the License.
  */
 
-#import "KeyValueStorage.h"
-#import "KeyValDatabase.h"
-#import "SoomlaConfig.h"
+#include "data/KeyValueStorage.h"
+#include "data/KeyValDatabase.h"
+#include "SoomlaConfig.h"
 #import "KeevaConfig.h"
-#import "SoomlaUtils.h"
-#import "Soomla.h"
+#include "SoomlaUtils.h"
+#include "Soomla.h"
 #import "Keeva.h"
 
 @interface KeyValueStorage()

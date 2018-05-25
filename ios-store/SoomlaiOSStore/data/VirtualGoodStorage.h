@@ -15,7 +15,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "VirtualItemStorage.h"
+#include "data/VirtualItemStorage.h"
 
 #define DB_KEY_GOOD_PREFIX @"good."
 

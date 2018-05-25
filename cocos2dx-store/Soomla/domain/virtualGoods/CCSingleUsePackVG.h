@@ -19,7 +19,7 @@
 #ifndef __CCSingleUsePackVG_H_
 #define __CCSingleUsePackVG_H_
 
-#include "CCVirtualGood.h"
+#include "domain/virtualGoods/CCVirtualGood.h"
 #include "CCStoreConsts.h"
 
 namespace soomla {

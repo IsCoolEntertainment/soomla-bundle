@@ -14,8 +14,8 @@
  limitations under the License.
  */
 
-#import "SoomlaUtils.h"
-#import "SoomlaConfig.h"
+#include "SoomlaUtils.h"
+#include "SoomlaConfig.h"
 #import <UIKit/UIKit.h>
 
 @implementation SoomlaUtils

@@ -14,10 +14,10 @@
  limitations under the License.
  */
 
-#import "MarketItem.h"
-#import "JSONConsts.h"
-#import "SoomlaUtils.h"
-#import "StoreJSONConsts.h"
+#include "domain/MarketItem.h"
+#include "data/JSONConsts.h"
+#include "SoomlaUtils.h"
+#include "data/StoreJSONConsts.h"
 
 @implementation MarketItem
 

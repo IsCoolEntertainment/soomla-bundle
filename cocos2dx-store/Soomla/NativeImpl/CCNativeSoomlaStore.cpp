@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#include "CCNativeSoomlaStore.h"
+#include "NativeImpl/CCNativeSoomlaStore.h"
 #include "CCNdkBridge.h"
 
 namespace soomla {

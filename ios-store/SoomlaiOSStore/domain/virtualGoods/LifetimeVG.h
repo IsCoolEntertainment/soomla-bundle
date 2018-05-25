@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#import "VirtualGood.h"
+#include "domain/virtualGoods/VirtualGood.h"
 
 /**
  A `LifetimeVG` is a virtual good that is bought only once and kept forever.

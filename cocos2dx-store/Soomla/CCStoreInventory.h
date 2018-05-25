@@ -20,10 +20,10 @@
 
 #include "cocos2d.h"
 #include "CCError.h"
-#include "CCVirtualGood.h"
-#include "CCUpgradeVG.h"
-#include "CCVirtualCurrency.h"
-#include "CCEquippableVG.h"
+#include "domain/virtualGoods/CCVirtualGood.h"
+#include "domain/virtualGoods/CCUpgradeVG.h"
+#include "domain/virtualCurrencies/CCVirtualCurrency.h"
+#include "domain/virtualGoods/CCEquippableVG.h"
 
 namespace soomla {
 	/** @class CCStoreInventory

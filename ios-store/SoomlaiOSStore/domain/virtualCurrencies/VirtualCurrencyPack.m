@@ -14,15 +14,15 @@
  limitations under the License.
  */
 
-#import "VirtualCurrencyPack.h"
-#import "VirtualCurrency.h"
-#import "StoreJSONConsts.h"
-#import "VirtualItemNotFoundException.h"
-#import "MarketItem.h"
-#import "SoomlaUtils.h"
-#import "StorageManager.h"
-#import "VirtualCurrencyStorage.h"
-#import "StoreInfo.h"
+#include "domain/virtualCurrencies/VirtualCurrencyPack.h"
+#include "domain/virtualCurrencies/VirtualCurrency.h"
+#include "data/StoreJSONConsts.h"
+#include "exceptions/VirtualItemNotFoundException.h"
+#include "domain/MarketItem.h"
+#include "SoomlaUtils.h"
+#include "data/StorageManager.h"
+#include "data/VirtualCurrencyStorage.h"
+#include "data/StoreInfo.h"
 
 @implementation VirtualCurrencyPack
 

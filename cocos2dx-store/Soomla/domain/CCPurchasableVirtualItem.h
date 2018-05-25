@@ -19,8 +19,8 @@
 #ifndef __CCPurchasableVirtualItem__
 #define __CCPurchasableVirtualItem__
 
-#include "CCVirtualItem.h"
-#include "../PurchaseTypes/CCPurchaseType.h"
+#include "domain/CCVirtualItem.h"
+#include "PurchaseTypes/CCPurchaseType.h"
 
 namespace soomla {
 	/** 

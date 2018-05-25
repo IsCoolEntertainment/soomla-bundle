@@ -8,7 +8,7 @@
 #include "jsapi.h"
 #include "jsfriendapi.h"
 #include "ScriptingCore.h"
-#include "JSBinding.h"
+#include "jsb/JSBinding.h"
 
 void register_jsb_soomla(JSContext *cx, JSObject *global);
 

@@ -3,11 +3,11 @@
 #define __CCStoreEventDispatcher_H_
 
 #include "cocos2d.h"
-#include "CCVirtualGood.h"
-#include "CCVirtualCurrency.h"
-#include "CCPurchasableVirtualItem.h"
-#include "CCEquippableVG.h"
-#include "CCUpgradeVG.h"
+#include "domain/virtualGoods/CCVirtualGood.h"
+#include "domain/virtualCurrencies/CCVirtualCurrency.h"
+#include "domain/CCPurchasableVirtualItem.h"
+#include "domain/virtualGoods/CCEquippableVG.h"
+#include "domain/virtualGoods/CCUpgradeVG.h"
 
 namespace soomla {
     class CCStoreEventDispatcher: public cocos2d::Ref {

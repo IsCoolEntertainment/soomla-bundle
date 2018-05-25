@@ -1,7 +1,7 @@
 
-#import "DomainHelper.h"
-#import "DomainFactory.h"
-#import "CommonConsts.h"
+#include "DomainHelper.h"
+#include "DomainFactory.h"
+#include "CommonConsts.h"
 
 
 @interface DomainHelper ()

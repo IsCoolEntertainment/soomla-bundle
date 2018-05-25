@@ -20,7 +20,7 @@
 #define __CCEquippableVG_H_
 
 
-#include "CCLifetimeVG.h"
+#include "domain/virtualGoods/CCLifetimeVG.h"
 
 namespace soomla {
 	/** 

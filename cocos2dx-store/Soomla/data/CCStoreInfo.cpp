@@ -16,20 +16,20 @@
 
 
 
-#include "CCStoreInfo.h"
-#include "../domain/virtualGoods/CCSingleUseVG.h"
-#include "../domain/virtualGoods/CCEquippableVG.h"
-#include "../domain/virtualGoods/CCSingleUsePackVG.h"
-#include "../domain/virtualCurrencies/CCVirtualCurrency.h"
-#include "../domain/virtualCurrencies/CCVirtualCurrencyPack.h"
-#include "../domain/CCMarketItem.h"
-#include "CCPurchaseWithMarket.h"
+#include "data/CCStoreInfo.h"
+#include "domain/virtualGoods/CCSingleUseVG.h"
+#include "domain/virtualGoods/CCEquippableVG.h"
+#include "domain/virtualGoods/CCSingleUsePackVG.h"
+#include "domain/virtualCurrencies/CCVirtualCurrency.h"
+#include "domain/virtualCurrencies/CCVirtualCurrencyPack.h"
+#include "domain/CCMarketItem.h"
+#include "PurchaseTypes/CCPurchaseWithMarket.h"
 #include "CCDomainFactory.h"
 #include "CCDomainHelper.h"
 #include "CCSoomlaUtils.h"
-#include "CCKeyValueStorage.h"
+#include "data/CCKeyValueStorage.h"
 #include "CCJsonHelper.h"
-#include "CCNativeStoreInfo.h"
+#include "NativeImpl/CCNativeStoreInfo.h"
 #include "CCSoomlaEventDispatcher.h"
 
 namespace soomla {

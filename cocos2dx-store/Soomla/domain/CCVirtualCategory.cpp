@@ -16,7 +16,7 @@
 
 
 
-#include "CCVirtualCategory.h"
+#include "domain/CCVirtualCategory.h"
 
 
 namespace soomla {

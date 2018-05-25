@@ -15,7 +15,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "SoomlaEntity.h"
+#include "SoomlaEntity.h"
 
 /**
  ABSTRACT.

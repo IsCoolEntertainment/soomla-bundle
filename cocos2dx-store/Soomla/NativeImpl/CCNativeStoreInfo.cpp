@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#include "CCNativeStoreInfo.h"
+#include "NativeImpl/CCNativeStoreInfo.h"
 #include "CCNdkBridge.h"
 #include "CCSoomlaUtils.h"
 

@@ -19,7 +19,7 @@
 
 #include "cocos2d.h"
 #include "CCSoomlaMacros.h"
-#include "CCAggregateReward.h"
+#include "rewards/CCAggregateReward.h"
 
 namespace soomla {
     class CCRandomReward : public CCAggregateReward {

@@ -14,12 +14,12 @@
  limitations under the License.
  */
 
-#import "VirtualItemStorage.h"
-#import "VirtualItem.h"
-#import "StorageManager.h"
-#import "KeyValDatabase.h"
-#import "SoomlaUtils.h"
-#import "KeyValueStorage.h"
+#include "data/VirtualItemStorage.h"
+#include "domain/VirtualItem.h"
+#include "data/StorageManager.h"
+#include "data/KeyValDatabase.h"
+#include "SoomlaUtils.h"
+#include "data/KeyValueStorage.h"
 
 @implementation VirtualItemStorage
 

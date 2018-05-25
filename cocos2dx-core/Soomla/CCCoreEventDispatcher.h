@@ -18,7 +18,7 @@
 #define __CCCoreEventDispatcher_H_
 
 #include "cocos2d.h"
-#include "CCReward.h"
+#include "rewards/CCReward.h"
 
 namespace soomla {
 

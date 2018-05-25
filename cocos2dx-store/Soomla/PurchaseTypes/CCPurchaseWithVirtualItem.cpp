@@ -14,13 +14,13 @@
  limitations under the License.
  */
 
-#include "CCPurchaseWithVirtualItem.h"
+#include "PurchaseTypes/CCPurchaseWithVirtualItem.h"
 #include "CCSoomlaUtils.h"
-#include "CCStoreInfo.h"
-#include "CCPurchasableVirtualItem.h"
+#include "data/CCStoreInfo.h"
+#include "domain/CCPurchasableVirtualItem.h"
 #include "CCStoreEventDispatcher.h"
-#include "CCVirtualGoodsStorage.h"
-#include "CCVirtualCurrencyStorage.h"
+#include "data/CCVirtualGoodsStorage.h"
+#include "data/CCVirtualCurrencyStorage.h"
 
 namespace soomla {
     #define TAG "SOOMLA PurchaseWithVirtualItem"

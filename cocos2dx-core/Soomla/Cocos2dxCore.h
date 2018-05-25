@@ -22,18 +22,18 @@
 #include "CCCoreBridge.h"
 #include "CCError.h"
 #include "CCSoomlaEventDispatcher.h"
-#include "CCSoomlaEntity.h"
-#include "CCReward.h"
-#include "CCRandomReward.h"
-#include "CCBadgeReward.h"
-#include "CCSequenceReward.h"
+#include "domain/CCSoomlaEntity.h"
+#include "rewards/CCReward.h"
+#include "rewards/CCRandomReward.h"
+#include "rewards/CCBadgeReward.h"
+#include "rewards/CCSequenceReward.h"
 #include "CCSchedule.h"
 #include "CCSoomlaUtils.h"
-#include "CCKeyValueStorage.h"
-#include "CCRewardStorage.h"
+#include "data/CCKeyValueStorage.h"
+#include "data/CCRewardStorage.h"
 
 #ifdef COCOS2D_JAVASCRIPT
-#include "jsb_soomla.h"
+#include "jsb/jsb_soomla.h"
 #endif
 
 #endif

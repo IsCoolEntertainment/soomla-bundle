@@ -14,9 +14,9 @@
  limitations under the License.
  */
 
-#import "SingleUseVG.h"
-#import "StorageManager.h"
-#import "VirtualGoodStorage.h"
+#include "domain/virtualGoods/SingleUseVG.h"
+#include "data/StorageManager.h"
+#include "data/VirtualGoodStorage.h"
 
 @implementation SingleUseVG
 

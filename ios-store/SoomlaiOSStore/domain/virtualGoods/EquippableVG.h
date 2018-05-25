@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#import "LifetimeVG.h"
+#include "domain/virtualGoods/LifetimeVG.h"
 
 /**
  These are the available ways to equip a virtual good (explained below).

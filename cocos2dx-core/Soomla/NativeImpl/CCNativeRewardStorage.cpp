@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#include "CCNativeRewardStorage.h"
+#include "NativeImpl/CCNativeRewardStorage.h"
 #include "CCError.h"
 #include "CCNdkBridge.h"
 #include "CCSoomlaUtils.h"

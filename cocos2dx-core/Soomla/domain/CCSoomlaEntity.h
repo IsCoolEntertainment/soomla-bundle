@@ -18,7 +18,7 @@
 #define __CCSoomlaEntity_H_
 
 #include "cocos2d.h"
-#include "CCDomain.h"
+#include "domain/CCDomain.h"
 #include "CCCoreConsts.h"
 #include "CCSoomlaMacros.h"
 

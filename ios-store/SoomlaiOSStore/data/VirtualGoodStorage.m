@@ -14,16 +14,16 @@
  limitations under the License.
  */
 
-#import "VirtualGoodStorage.h"
-#import "VirtualGood.h"
-#import "StorageManager.h"
-#import "StoreEventHandling.h"
-#import "SoomlaUtils.h"
-#import "StoreInfo.h"
-#import "VirtualItemNotFoundException.h"
-#import "UpgradeVG.h"
-#import "EquippableVG.h"
-#import "KeyValueStorage.h"
+#include "data/VirtualGoodStorage.h"
+#include "domain/virtualGoods/VirtualGood.h"
+#include "data/StorageManager.h"
+#include "StoreEventHandling.h"
+#include "SoomlaUtils.h"
+#include "data/StoreInfo.h"
+#include "exceptions/VirtualItemNotFoundException.h"
+#include "domain/virtualGoods/UpgradeVG.h"
+#include "domain/virtualGoods/EquippableVG.h"
+#include "data/KeyValueStorage.h"
 
 @implementation VirtualGoodStorage
 

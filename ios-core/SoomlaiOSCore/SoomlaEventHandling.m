@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Soomla. All rights reserved.
 //
 
-#import "SoomlaEventHandling.h"
-#import "BadgeReward.h"
+#include "SoomlaEventHandling.h"
+#include "rewards/BadgeReward.h"
 
 @implementation SoomlaEventHandling
 

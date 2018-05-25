@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#import "PurchasableVirtualItem.h"
+#include "domain/PurchasableVirtualItem.h"
 
 /**
  This is an abstract representation of the application's virtual goods.

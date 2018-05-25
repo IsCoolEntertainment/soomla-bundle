@@ -14,10 +14,10 @@
  limitations under the License.
  */
 
-#import "LifetimeVG.h"
-#import "SoomlaUtils.h"
-#import "StorageManager.h"
-#import "VirtualGoodStorage.h"
+#include "domain/virtualGoods/LifetimeVG.h"
+#include "SoomlaUtils.h"
+#include "data/StorageManager.h"
+#include "data/VirtualGoodStorage.h"
 
 @implementation LifetimeVG
 

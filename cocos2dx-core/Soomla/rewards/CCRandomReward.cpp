@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#include "CCRandomReward.h"
+#include "rewards/CCRandomReward.h"
 
 soomla::CCRandomReward *soomla::CCRandomReward::create(
         cocos2d::__String *id,

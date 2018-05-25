@@ -14,8 +14,8 @@
  limitations under the License.
  */
 
-#include "CCVirtualItemStorage.h"
-#include "CCKeyValueStorage.h"
+#include "data/CCVirtualItemStorage.h"
+#include "data/CCKeyValueStorage.h"
 #include "CCSoomlaUtils.h"
 
 namespace soomla {

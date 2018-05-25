@@ -14,8 +14,8 @@
  limitations under the License.
  */
 
-#import "CCStoreBridgeBinderIos.h"
-#import "StoreBridge.h"
+#include "CCStoreBridgeBinderIos.h"
+#include "StoreBridge.h"
 
 namespace soomla {
     void CCStoreBridgeBinderIos::bind() {

@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Soomla. All rights reserved.
 //
 
-#import "DictionaryFactory.h"
-#import "JSONConsts.h"
-#import "SoomlaUtils.h"
+#include "util/DictionaryFactory.h"
+#include "data/JSONConsts.h"
+#include "SoomlaUtils.h"
 
 @implementation DictionaryFactory
 

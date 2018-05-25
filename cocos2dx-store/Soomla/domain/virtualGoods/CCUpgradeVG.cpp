@@ -14,10 +14,10 @@
  limitations under the License.
  */
 
-#include "CCUpgradeVG.h"
-#include "CCStoreInfo.h"
+#include "domain/virtualGoods/CCUpgradeVG.h"
+#include "data/CCStoreInfo.h"
 #include "CCSoomlaUtils.h"
-#include "CCVirtualGoodsStorage.h"
+#include "data/CCVirtualGoodsStorage.h"
 
 namespace soomla {
     

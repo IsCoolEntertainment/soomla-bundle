@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#include "CCNativeKeyValueStorage.h"
+#include "NativeImpl/CCNativeKeyValueStorage.h"
 #include "CCError.h"
 #include "CCNdkBridge.h"
 #include "CCSoomlaUtils.h"

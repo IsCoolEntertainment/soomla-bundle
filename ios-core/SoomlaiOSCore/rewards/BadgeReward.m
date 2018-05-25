@@ -14,8 +14,8 @@
  limitations under the License.
  */
 
-#import "BadgeReward.h"
-#import "JSONConsts.h"
+#include "rewards/BadgeReward.h"
+#include "data/JSONConsts.h"
 
 @implementation BadgeReward
 

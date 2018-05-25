@@ -19,7 +19,7 @@
 #ifndef __CCVirtualGood_H_
 #define __CCVirtualGood_H_
 
-#include "CCPurchasableVirtualItem.h"
+#include "domain/CCPurchasableVirtualItem.h"
 
 namespace soomla {
 	/** 

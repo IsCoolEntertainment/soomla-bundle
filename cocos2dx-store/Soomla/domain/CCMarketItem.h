@@ -21,7 +21,7 @@
 
 #include "cocos2d.h"
 #include "CCSoomlaMacros.h"
-#include "CCDomain.h"
+#include "domain/CCDomain.h"
 #include "CCStoreConsts.h"
 
 namespace soomla {

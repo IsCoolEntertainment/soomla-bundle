@@ -4,7 +4,7 @@
 
 
 #import <Foundation/Foundation.h>
-#import "IStoreAssets.h"
+#include "IStoreAssets.h"
 
 @interface StoreAssetsBridge : NSObject <IStoreAssets>{
     int version;

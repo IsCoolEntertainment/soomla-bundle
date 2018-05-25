@@ -1,5 +1,5 @@
 
-#include "CCVirtualItemReward.h"
+#include "rewards/CCVirtualItemReward.h"
 #include "CCStoreConsts.h"
 #include "CCStoreInventory.h"
 #include "CCSoomlaUtils.h"

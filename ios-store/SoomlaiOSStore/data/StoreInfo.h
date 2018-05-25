@@ -15,7 +15,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "IStoreAssets.h"
+#include "IStoreAssets.h"
 
 #define DB_NONCONSUMABLE_KEY_PREFIX @"nonconsumable."
 

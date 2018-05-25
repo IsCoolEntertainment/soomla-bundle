@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#import "PurchasableVirtualItem.h"
+#include "domain/PurchasableVirtualItem.h"
 
 @class VirtualCurrency;
 

@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#include "CCBadgeReward.h"
+#include "rewards/CCBadgeReward.h"
 
 soomla::CCBadgeReward *soomla::CCBadgeReward::create(
         cocos2d::__String *id,

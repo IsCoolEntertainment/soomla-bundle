@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#include "CCDomain.h"
+#include "domain/CCDomain.h"
 #include "CCDomainHelper.h"
 #include "CCCoreConsts.h"
 

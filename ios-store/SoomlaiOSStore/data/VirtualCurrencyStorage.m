@@ -14,11 +14,11 @@
  limitations under the License.
  */
 
-#import "VirtualCurrencyStorage.h"
-#import "VirtualCurrency.h"
-#import "StorageManager.h"
-#import "StoreEventHandling.h"
-#import "KeyValDatabase.h"
+#include "data/VirtualCurrencyStorage.h"
+#include "domain/virtualCurrencies/VirtualCurrency.h"
+#include "data/StorageManager.h"
+#include "StoreEventHandling.h"
+#include "data/KeyValDatabase.h"
 
 @implementation VirtualCurrencyStorage
 

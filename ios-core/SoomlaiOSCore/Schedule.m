@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 SOOMLA. All rights reserved.
 //
 
-#import "Schedule.h"
-#import "JSONConsts.h"
-#import "SoomlaUtils.h"
+#include "Schedule.h"
+#include "data/JSONConsts.h"
+#include "SoomlaUtils.h"
 
 @implementation DateTimeRange
 

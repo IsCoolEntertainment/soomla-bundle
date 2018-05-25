@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#import "SoomlaEntity.h"
+#include "SoomlaEntity.h"
 
 @class Schedule;
 

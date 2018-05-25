@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#import "VirtualItemNotFoundException.h"
+#include "exceptions/VirtualItemNotFoundException.h"
 
 @implementation VirtualItemNotFoundException
 

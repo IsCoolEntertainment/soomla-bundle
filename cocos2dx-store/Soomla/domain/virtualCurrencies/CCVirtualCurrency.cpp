@@ -14,8 +14,8 @@
  limitations under the License.
  */
 
-#include "CCVirtualCurrency.h"
-#include "CCVirtualCurrencyStorage.h"
+#include "domain/virtualCurrencies/CCVirtualCurrency.h"
+#include "data/CCVirtualCurrencyStorage.h"
 
 namespace soomla {
     

@@ -3,9 +3,9 @@
 #include "CCStoreEventDispatcher.h"
 #include "CCSoomlaEventDispatcher.h"
 #include "CCError.h"
-#include "CCStoreInfo.h"
+#include "data/CCStoreInfo.h"
 #include "CCSoomlaUtils.h"
-#include "CCPurchaseWithMarket.h"
+#include "PurchaseTypes/CCPurchaseWithMarket.h"
 #include "CCNdkBridge.h"
 #include "CCStoreInventory.h"
 

@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#import "VirtualGood.h"
+#include "domain/virtualGoods/VirtualGood.h"
 
 @class SingleUseVG;
 

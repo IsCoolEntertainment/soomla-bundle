@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#include "CCPurchaseType.h"
+#include "PurchaseTypes/CCPurchaseType.h"
 #include "CCSoomlaUtils.h"
 
 namespace soomla {

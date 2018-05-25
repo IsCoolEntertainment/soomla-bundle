@@ -14,14 +14,14 @@
  limitations under the License.
  */
 
-#import "SingleUsePackVG.h"
-#import "StoreJSONConsts.h"
-#import "StorageManager.h"
-#import "VirtualGoodStorage.h"
-#import "SingleUseVG.h"
-#import "StoreInfo.h"
-#import "SoomlaUtils.h"
-#import "VirtualItemNotFoundException.h"
+#include "domain/virtualGoods/SingleUsePackVG.h"
+#include "data/StoreJSONConsts.h"
+#include "data/StorageManager.h"
+#include "data/VirtualGoodStorage.h"
+#include "domain/virtualGoods/SingleUseVG.h"
+#include "data/StoreInfo.h"
+#include "SoomlaUtils.h"
+#include "exceptions/VirtualItemNotFoundException.h"
 
 @implementation SingleUsePackVG
 

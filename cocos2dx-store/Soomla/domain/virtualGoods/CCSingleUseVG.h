@@ -22,7 +22,7 @@
 #include <iostream>
 
 
-#include "CCVirtualGood.h"
+#include "domain/virtualGoods/CCVirtualGood.h"
 
 namespace soomla {
 	/** 

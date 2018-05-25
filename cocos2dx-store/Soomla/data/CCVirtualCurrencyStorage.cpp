@@ -14,10 +14,10 @@
  limitations under the License.
  */
 
-#include "CCVirtualCurrencyStorage.h"
+#include "data/CCVirtualCurrencyStorage.h"
 #include "CCStoreEventDispatcher.h"
 #include "CCSoomlaUtils.h"
-#include "CCNativeVirtualCurrencyStorage.h"
+#include "NativeImpl/CCNativeVirtualCurrencyStorage.h"
 
 namespace soomla {
 #define TAG "SOOMLA VirtualCurrencyStorage"

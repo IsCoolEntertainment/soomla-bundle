@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#import "Reward.h"
+#include "rewards/Reward.h"
 
 @interface VirtualItemReward : Reward {
     

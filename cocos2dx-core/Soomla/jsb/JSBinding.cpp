@@ -1,6 +1,6 @@
 #ifdef COCOS2D_JAVASCRIPT
 
-#include "JSBinding.h"
+#include "jsb/JSBinding.h"
 #include "CCError.h"
 #include "jansson.h"
 #include "CCJsonHelper.h"

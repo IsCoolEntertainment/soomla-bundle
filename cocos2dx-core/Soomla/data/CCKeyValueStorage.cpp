@@ -14,8 +14,8 @@
  limitations under the License.
  */
 
-#include "CCNativeKeyValueStorage.h"
-#include "CCBridgelessKeyValueStorage.h"
+#include "NativeImpl/CCNativeKeyValueStorage.h"
+#include "data/CCBridgelessKeyValueStorage.h"
 
 namespace soomla {
     static CCKeyValueStorage *s_SharedKeyValueStorage = NULL;

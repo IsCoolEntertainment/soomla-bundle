@@ -14,12 +14,12 @@
  limitations under the License.
  */
 
-#import "VirtualItemReward.h"
-#import "VirtualItem.h"
-#import "StoreInventory.h"
-#import "StoreJSONConsts.h"
-#import "VirtualItemNotFoundException.h"
-#import "SoomlaUtils.h"
+#include "rewards/VirtualItemReward.h"
+#include "domain/VirtualItem.h"
+#include "StoreInventory.h"
+#include "data/StoreJSONConsts.h"
+#include "exceptions/VirtualItemNotFoundException.h"
+#include "SoomlaUtils.h"
 
 @implementation VirtualItemReward
 

@@ -1,6 +1,6 @@
 
-#import "NdkGlue.h"
-#import "CCNdkBridgeIos.h"
+#include "NdkGlue.h"
+#include "CCNdkBridgeIos.h"
 
 @interface NdkGlue ()
 @property(nonatomic, retain) NSMutableDictionary *callHandlers;

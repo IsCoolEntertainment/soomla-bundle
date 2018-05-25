@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#import "VirtualItem.h"
+#include "domain/VirtualItem.h"
 
 @class PurchaseType;
 

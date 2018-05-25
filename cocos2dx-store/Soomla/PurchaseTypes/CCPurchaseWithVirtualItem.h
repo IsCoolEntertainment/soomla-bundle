@@ -19,7 +19,7 @@
 #ifndef __CCPurchaseWithVirtualItem_H_
 #define __CCPurchaseWithVirtualItem_H_
 
-#include "CCPurchaseType.h"
+#include "PurchaseTypes/CCPurchaseType.h"
 
 namespace soomla {
 	/** 

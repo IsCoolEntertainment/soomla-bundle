@@ -19,7 +19,7 @@
 #define __CCDomainHelper_H_
 
 #include "cocos2d.h"
-#include "CCDomain.h"
+#include "domain/CCDomain.h"
 
 namespace soomla {
     class CCDomainHelper {

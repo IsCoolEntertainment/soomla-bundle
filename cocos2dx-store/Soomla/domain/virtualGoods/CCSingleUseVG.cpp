@@ -14,8 +14,8 @@
  limitations under the License.
  */
 
-#include "CCSingleUseVG.h"
-#include "CCVirtualGoodsStorage.h"
+#include "domain/virtualGoods/CCSingleUseVG.h"
+#include "data/CCVirtualGoodsStorage.h"
 
 namespace soomla {
     

@@ -15,9 +15,9 @@
  */
 
 #include "CCSoomlaStore.h"
-#include "CCStoreInfo.h"
+#include "data/CCStoreInfo.h"
 #include "CCSoomlaUtils.h"
-#include "CCNativeSoomlaStore.h"
+#include "NativeImpl/CCNativeSoomlaStore.h"
 #include "CCStoreEventDispatcher.h"
 #include "CCStoreBridge.h"
 

@@ -1,5 +1,5 @@
 
-#import "CommonConsts.h"
+#include "CommonConsts.h"
 
 @implementation CommonConsts {
 }

@@ -16,10 +16,10 @@
 
 
 
-#include "CCPurchasableVirtualItem.h"
+#include "domain/CCPurchasableVirtualItem.h"
 
-#include "../PurchaseTypes/CCPurchaseWithVirtualItem.h"
-#include "../PurchaseTypes/CCPurchaseWithMarket.h"
+#include "PurchaseTypes/CCPurchaseWithVirtualItem.h"
+#include "PurchaseTypes/CCPurchaseWithMarket.h"
 
 namespace soomla {
     

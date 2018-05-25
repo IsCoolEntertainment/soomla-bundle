@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#include "CCAggregateReward.h"
+#include "rewards/CCAggregateReward.h"
 
 bool soomla::CCAggregateReward::init(
         cocos2d::__String *id,

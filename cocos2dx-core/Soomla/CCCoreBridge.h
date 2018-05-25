@@ -19,8 +19,8 @@
 
 #include "cocos2d.h"
 #include "CCError.h"
-#include "CCReward.h"
-#include "CCSequenceReward.h"
+#include "rewards/CCReward.h"
+#include "rewards/CCSequenceReward.h"
 
 namespace soomla {
 

@@ -18,7 +18,7 @@
 #define __CCVirtualItemStorage_H__
 
 #include "cocos2d.h"
-#include "CCVirtualItem.h"
+#include "domain/CCVirtualItem.h"
 #include "CCError.h"
 
 namespace soomla {

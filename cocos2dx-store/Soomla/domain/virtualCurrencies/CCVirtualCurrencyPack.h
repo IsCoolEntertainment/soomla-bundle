@@ -20,7 +20,7 @@
 #define __CCVirtualCurrencyPack_H_
 
 #include "CCSoomlaMacros.h"
-#include "../CCPurchasableVirtualItem.h"
+#include "domain/CCPurchasableVirtualItem.h"
 #include "CCStoreConsts.h"
 
 namespace soomla {

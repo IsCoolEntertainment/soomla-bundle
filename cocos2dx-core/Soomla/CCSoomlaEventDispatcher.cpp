@@ -17,7 +17,7 @@
 #include "CCSoomlaEventDispatcher.h"
 
 #ifdef COCOS2D_JAVASCRIPT
-#include "JSBinding.h"
+#include "jsb/JSBinding.h"
 #endif
 
 namespace soomla {

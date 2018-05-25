@@ -14,11 +14,11 @@
  limitations under the License.
  */
 
-#import "SequenceReward.h"
-#import "JSONConsts.h"
-#import "BadgeReward.h"
-#import "RewardStorage.h"
-#import "SoomlaUtils.h"
+#include "rewards/SequenceReward.h"
+#include "data/JSONConsts.h"
+#include "rewards/BadgeReward.h"
+#include "data/RewardStorage.h"
+#include "SoomlaUtils.h"
 
 @implementation SequenceReward
 

@@ -19,10 +19,10 @@
 
 #include "cocos2d.h"
 #include "CCSoomlaMacros.h"
-#include "CCDomain.h"
+#include "domain/CCDomain.h"
 #include "CCCoreConsts.h"
 #include "CCSchedule.h"
-#include "CCSoomlaEntity.h"
+#include "domain/CCSoomlaEntity.h"
 
 namespace soomla {
     class CCReward : public CCSoomlaEntity {

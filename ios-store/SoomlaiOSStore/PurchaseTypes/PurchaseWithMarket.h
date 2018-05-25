@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#import "PurchaseType.h"
+#include "PurchaseTypes/PurchaseType.h"
 
 @class MarketItem;
 

@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#import "StoreConfig.h"
+#include "StoreConfig.h"
 
 const int METADATA_VERSION          = 3;
 

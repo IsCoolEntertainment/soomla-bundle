@@ -14,11 +14,11 @@
  limitations under the License.
  */
 
-#include "CCVirtualCurrencyPack.h"
-#include "CCStoreInfo.h"
+#include "domain/virtualCurrencies/CCVirtualCurrencyPack.h"
+#include "data/CCStoreInfo.h"
 #include "CCSoomlaUtils.h"
-#include "CCVirtualCurrency.h"
-#include "CCVirtualCurrencyStorage.h"
+#include "domain/virtualCurrencies/CCVirtualCurrency.h"
+#include "data/CCVirtualCurrencyStorage.h"
 
 namespace soomla {
     

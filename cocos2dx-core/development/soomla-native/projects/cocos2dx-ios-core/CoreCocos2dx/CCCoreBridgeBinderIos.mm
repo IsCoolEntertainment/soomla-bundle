@@ -14,8 +14,8 @@
  limitations under the License.
  */
 
-#import "CCCoreBridgeBinderIos.h"
-#import "CoreBridge.h"
+#include "CCCoreBridgeBinderIos.h"
+#include "CoreBridge.h"
 
 namespace soomla {
     void CCCoreBridgeBinderIos::bind() {

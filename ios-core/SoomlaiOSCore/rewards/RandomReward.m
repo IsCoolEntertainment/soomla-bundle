@@ -14,10 +14,10 @@
  limitations under the License.
  */
 
-#import "RandomReward.h"
-#import "JSONConsts.h"
-#import "BadgeReward.h"
-#import "SoomlaUtils.h"
+#include "rewards/RandomReward.h"
+#include "data/JSONConsts.h"
+#include "rewards/BadgeReward.h"
+#include "SoomlaUtils.h"
 
 @implementation RandomReward
 

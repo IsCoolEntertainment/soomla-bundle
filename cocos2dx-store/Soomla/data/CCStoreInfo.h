@@ -21,9 +21,9 @@
 
 #include "cocos2d.h"
 #include "CCStoreAssets.h"
-#include "../domain/CCVirtualItem.h"
-#include "../domain/virtualGoods/CCUpgradeVG.h"
-#include "../domain/CCVirtualCategory.h"
+#include "domain/CCVirtualItem.h"
+#include "domain/virtualGoods/CCUpgradeVG.h"
+#include "domain/CCVirtualCategory.h"
 #include "CCError.h"
 
 namespace soomla {

@@ -14,12 +14,12 @@
  limitations under the License.
  */
 
-#import "PurchaseWithMarket.h"
-#import "MarketItem.h"
-#import "SoomlaUtils.h"
-#import "SoomlaStore.h"
-#import "StoreEventHandling.h"
-#import "PurchasableVirtualItem.h"
+#include "PurchaseTypes/PurchaseWithMarket.h"
+#include "domain/MarketItem.h"
+#include "SoomlaUtils.h"
+#include "SoomlaStore.h"
+#include "StoreEventHandling.h"
+#include "domain/PurchasableVirtualItem.h"
 
 @implementation PurchaseWithMarket
 

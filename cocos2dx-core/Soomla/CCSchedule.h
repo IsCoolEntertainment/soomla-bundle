@@ -17,7 +17,7 @@
 #ifndef __CCSchedule_H_
 #define __CCSchedule_H_
 
-#include "CCDomain.h"
+#include "domain/CCDomain.h"
 #include "CCSoomlaMacros.h"
 #include "CCCoreConsts.h"
 

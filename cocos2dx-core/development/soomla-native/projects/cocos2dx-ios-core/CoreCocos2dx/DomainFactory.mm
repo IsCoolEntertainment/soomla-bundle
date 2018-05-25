@@ -1,6 +1,6 @@
 
-#import "DomainFactory.h"
-#import "CommonConsts.h"
+#include "DomainFactory.h"
+#include "CommonConsts.h"
 
 
 @interface DomainFactory ()

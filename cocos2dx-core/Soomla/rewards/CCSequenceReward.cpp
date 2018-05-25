@@ -14,8 +14,8 @@
  limitations under the License.
  */
 
-#include "CCSequenceReward.h"
-#include "CCRewardStorage.h"
+#include "rewards/CCSequenceReward.h"
+#include "data/CCRewardStorage.h"
 
 soomla::CCSequenceReward *soomla::CCSequenceReward::create(
         cocos2d::__String *id,

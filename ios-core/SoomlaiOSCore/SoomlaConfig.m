@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#import "SoomlaConfig.h"
+#include "SoomlaConfig.h"
 
 
 int SOOMLA_VERSION      = 1;

@@ -16,8 +16,8 @@
 
 //  Created by Igor Yegoroff on 5/16/13.
 
-#include "CCVirtualItem.h"
-#include "CCStoreInfo.h"
+#include "domain/CCVirtualItem.h"
+#include "data/CCStoreInfo.h"
 
 namespace soomla {
 

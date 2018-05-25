@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#import "JSONConsts.h"
+#include "data/JSONConsts.h"
 
 
 /** Global **/

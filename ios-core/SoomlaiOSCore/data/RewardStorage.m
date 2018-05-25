@@ -14,13 +14,13 @@
  limitations under the License.
  */
 
-#import "RewardStorage.h"
-#import "Reward.h"
-#import "SequenceReward.h"
-#import "SoomlaEventHandling.h"
-#import "KeyValueStorage.h"
-#import "SoomlaConfig.h"
-#import "SoomlaUtils.h"
+#include "data/RewardStorage.h"
+#include "rewards/Reward.h"
+#include "rewards/SequenceReward.h"
+#include "SoomlaEventHandling.h"
+#include "data/KeyValueStorage.h"
+#include "SoomlaConfig.h"
+#include "SoomlaUtils.h"
 
 @implementation RewardStorage
 

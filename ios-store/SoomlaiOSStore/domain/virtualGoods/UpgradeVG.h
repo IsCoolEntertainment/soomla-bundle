@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#import "LifetimeVG.h"
+#include "domain/virtualGoods/LifetimeVG.h"
 
 /**
  An upgrade virtual good is one virtual good in a series of virtual goods that 

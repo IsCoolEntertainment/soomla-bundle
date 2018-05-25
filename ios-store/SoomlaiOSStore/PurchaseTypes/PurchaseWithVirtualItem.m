@@ -14,16 +14,16 @@
  limitations under the License.
  */
 
-#import "PurchaseWithVirtualItem.h"
-#import "SoomlaUtils.h"
-#import "VirtualItem.h"
-#import "StoreEventHandling.h"
-#import "PurchasableVirtualItem.h"
-#import "VirtualItemStorage.h"
-#import "StorageManager.h"
-#import "InsufficientFundsException.h"
-#import "StoreInfo.h"
-#import "VirtualItemNotFoundException.h"
+#include "PurchaseTypes/PurchaseWithVirtualItem.h"
+#include "SoomlaUtils.h"
+#include "domain/VirtualItem.h"
+#include "StoreEventHandling.h"
+#include "domain/PurchasableVirtualItem.h"
+#include "data/VirtualItemStorage.h"
+#include "data/StorageManager.h"
+#include "exceptions/InsufficientFundsException.h"
+#include "data/StoreInfo.h"
+#include "exceptions/VirtualItemNotFoundException.h"
 
 @implementation PurchaseWithVirtualItem
 

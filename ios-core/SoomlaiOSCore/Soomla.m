@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#import "Soomla.h"
+#include "Soomla.h"
 
 #define SOOMLA_CORE_VERSION @"1.2.0"
 

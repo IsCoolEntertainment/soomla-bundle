@@ -14,9 +14,9 @@
  limitations under the License.
  */
 
-#import "VirtualCurrency.h"
-#import "StorageManager.h"
-#import "VirtualCurrencyStorage.h"
+#include "domain/virtualCurrencies/VirtualCurrency.h"
+#include "data/StorageManager.h"
+#include "data/VirtualCurrencyStorage.h"
 
 @implementation VirtualCurrency
     

@@ -14,12 +14,12 @@
  limitations under the License.
  */
 
-#import "Reward.h"
-#import "JSONConsts.h"
-#import "RewardStorage.h"
-#import "SoomlaUtils.h"
-#import "DictionaryFactory.h"
-#import "Schedule.h"
+#include "rewards/Reward.h"
+#include "data/JSONConsts.h"
+#include "data/RewardStorage.h"
+#include "SoomlaUtils.h"
+#include "util/DictionaryFactory.h"
+#include "Schedule.h"
 
 @implementation Reward
 

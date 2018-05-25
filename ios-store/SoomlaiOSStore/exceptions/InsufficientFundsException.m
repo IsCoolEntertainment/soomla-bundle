@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#import "InsufficientFundsException.h"
+#include "exceptions/InsufficientFundsException.h"
 
 @implementation InsufficientFundsException
 

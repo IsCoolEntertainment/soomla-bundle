@@ -14,10 +14,10 @@
  limitations under the License.
  */
 
-#import "VirtualCategory.h"
-#import "JSONConsts.h"
-#import "SoomlaUtils.h"
-#import "StoreJSONConsts.h"
+#include "domain/VirtualCategory.h"
+#include "data/JSONConsts.h"
+#include "SoomlaUtils.h"
+#include "data/StoreJSONConsts.h"
 
 @implementation VirtualCategory
 

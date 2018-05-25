@@ -15,9 +15,9 @@
  */
 
 
-#import "StoreEventHandling.h"
-#import "MarketItem.h"
-#import "VirtualGood.h"
+#include "StoreEventHandling.h"
+#include "domain/MarketItem.h"
+#include "domain/virtualGoods/VirtualGood.h"
 
 extern BOOL VERIFY_PURCHASES;
 
