@@ -470,6 +470,14 @@ public abstract class IabHelper {
         }
     }
 
+    protected boolean checkSetupDone(String operation) {
+        if (!isSetupDone()) {
+            SoomlaUtils.LogError(TAG, "Illegal state for operation (" + operation + "): IAB helper is not set up.");
+            return false;
+        }
+
+        return true;
+    }
 
 
     /** Async related functions **/

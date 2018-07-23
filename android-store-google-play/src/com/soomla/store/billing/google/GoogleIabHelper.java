@@ -268,7 +268,8 @@ public class GoogleIabHelper extends IabHelper {
      * @throws IabException if there is a problem during consumption.
      */
      public void consume(IabPurchase itemInfo) throws IabException {
-         checkSetupDoneAndThrow("consume");
+         if ( !checkSetupDone("consume") )
+             return;
 
         if (!itemInfo.getItemType().equals(ITEM_TYPE_INAPP)) {
             throw new IabException(IabResult.IABHELPER_INVALID_CONSUMPTION,
