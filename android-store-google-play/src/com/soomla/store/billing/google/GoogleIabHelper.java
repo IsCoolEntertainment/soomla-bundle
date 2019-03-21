@@ -694,6 +694,11 @@ public class GoogleIabHelper extends IabHelper {
      * @throws JSONException
      */
     private int querySkuDetailsChunk(String itemType, IabInventory inv, ArrayList<String> chunkSkuList) throws RemoteException, JSONException {
+
+        if (mService == null) {
+            return IabResult.BILLING_RESPONSE_RESULT_BILLING_UNAVAILABLE;
+        }
+        
         Bundle querySkus = new Bundle();
         querySkus.putStringArrayList(GET_SKU_DETAILS_ITEM_LIST, chunkSkuList);
         Bundle skuDetails = mService.getSkuDetails(3, SoomlaApp.getAppContext().getPackageName(),
