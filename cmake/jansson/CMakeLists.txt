@@ -19,6 +19,14 @@ make_compilation_unit(
   )
 
 add_library( jansson ${compilation_unit_file} )
-target_include_directories( jansson PUBLIC ${jansson_source_root} )
+target_include_directories(
+  jansson
+  PUBLIC
+  $<BUILD_INTERFACE:${jansson_source_root}>
+  )
 
-install( TARGETS jansson DESTINATION ${library_install_dir} )
+install(
+  TARGETS jansson
+  DESTINATION ${library_install_dir}
+  EXPORT soomla
+  )

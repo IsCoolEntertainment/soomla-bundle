@@ -63,17 +63,21 @@ add_library( soomla_ios ${compilation_unit_file} )
 target_include_directories(
   soomla_ios
   PUBLIC
-  ${ios_core_source_root}
-  ${ios_store_source_root}
+  $<BUILD_INTERFACE:${ios_core_source_root}>
+  $<BUILD_INTERFACE:${ios_store_source_root}>
   )
 
 target_include_directories(
   soomla_ios
   PRIVATE
-  ${source_root}/ios-core/libs/keeva/headers/Keeva
+  $<BUILD_INTERFACE:${source_root}/ios-core/libs/keeva/headers/Keeva>
   )
 
-install( TARGETS soomla_ios DESTINATION ${library_install_dir} )
+install(
+  TARGETS soomla_ios
+  DESTINATION ${library_install_dir}
+  EXPORT soomla
+  )
 
 install(
   DIRECTORY ${ios_core_source_root}/ ${ios_store_source_root}/
@@ -84,4 +88,10 @@ install(
 install(
   FILES ${source_root}/ios-core/libs/keeva/libKeeva.a
   DESTINATION ${library_install_dir}
+  )
+
+target_link_libraries(
+  soomla_ios
+  PUBLIC
+  $<INSTALL_INTERFACE:Keeva>
   )

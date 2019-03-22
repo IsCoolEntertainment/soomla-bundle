@@ -20,3 +20,5 @@ endif()
 
 add_subdirectory( jansson )
 add_subdirectory( cocos )
+
+add_subdirectory( package )

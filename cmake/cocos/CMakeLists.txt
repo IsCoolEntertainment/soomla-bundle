@@ -110,11 +110,10 @@ add_library( soomla_cocos2dx ${compilation_unit_file} )
 target_include_directories(
   soomla_cocos2dx
   PUBLIC
-  ${cocos2dx_core_source_root}
-  ${cocos2dx_core_native_source_root}
-  ${cocos2dx_store_source_root}
-  ${cocos2dx_store_native_source_root}
-  ${cocos2dx_INCLUDE_DIR}
+  $<BUILD_INTERFACE:${cocos2dx_core_source_root}>
+  $<BUILD_INTERFACE:${cocos2dx_core_native_source_root}>
+  $<BUILD_INTERFACE:${cocos2dx_store_source_root}>
+  $<BUILD_INTERFACE:${cocos2dx_store_native_source_root}>
   )
 
 if( ${CMAKE_BUILD_TYPE} STREQUAL "release" )
@@ -126,9 +125,10 @@ endif()
 target_compile_definitions(
   soomla_cocos2dx
   PUBLIC
-  ${cocos2dx_DEFINITIONS}
   ${soomla_debug}
   )
+
+target_link_libraries( soomla_cocos2dx cocos2dx::cocos2dx )
 
 if( TARGET_IOS )
   target_link_libraries( soomla_cocos2dx soomla_ios )
@@ -136,7 +136,11 @@ endif()
 
 target_link_libraries( soomla_cocos2dx jansson )
 
-install( TARGETS soomla_cocos2dx DESTINATION ${library_install_dir} )
+install(
+  TARGETS soomla_cocos2dx
+  DESTINATION ${library_install_dir}
+  EXPORT soomla
+  )
 
 install(
   DIRECTORY ${cocos2dx_core_source_root}/ ${cocos2dx_store_source_root}/
