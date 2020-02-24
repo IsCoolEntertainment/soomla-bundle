@@ -65,6 +65,7 @@ target_include_directories(
   PUBLIC
   $<BUILD_INTERFACE:${ios_core_source_root}>
   $<BUILD_INTERFACE:${ios_store_source_root}>
+  $<INSTALL_INTERFACE:${header_install_dir}/soomla>
   )
 
 target_include_directories(

@@ -114,6 +114,7 @@ target_include_directories(
   $<BUILD_INTERFACE:${cocos2dx_core_native_source_root}>
   $<BUILD_INTERFACE:${cocos2dx_store_source_root}>
   $<BUILD_INTERFACE:${cocos2dx_store_native_source_root}>
+  $<INSTALL_INTERFACE:${header_install_dir}/soomla>
   )
 
 if( ${CMAKE_BUILD_TYPE} STREQUAL "release" )
