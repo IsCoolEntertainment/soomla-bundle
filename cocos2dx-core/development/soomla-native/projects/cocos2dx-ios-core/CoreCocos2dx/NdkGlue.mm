@@ -1,6 +1,14 @@
 
 #include "NdkGlue.h"
+#include "base/CCDirector.h"
 #include "CCNdkBridgeIos.h"
+#include <functional>
+
+namespace soomla {
+    namespace detail {
+       static void ndkCallback(json_t *jsonParams); 
+    }
+}
 
 @interface NdkGlue ()
 @property(nonatomic, retain) NSMutableDictionary *callHandlers;
@@ -104,10 +112,7 @@ static NSString* NDK_GLUE_TAG = @"SOOMLA NdkGlue";
 
     }
 
-    soomla::CCNdkBridgeIos::ndkCallback(jsonPrms);
-    if (jsonPrms) {
-        json_decref(jsonPrms);
-    }
+    cocos2d::Director::getInstance()->getScheduler()->performFunctionInCocosThread(std::bind(&soomla::detail::ndkCallback, jsonPrms));
 }
 
 - (void)registerCallHandlerForKey:(NSString *)key withBlock:(void (^)(NSDictionary *parameters, NSMutableDictionary *retParameters))callHandler {
@@ -127,3 +132,10 @@ static NSString* NDK_GLUE_TAG = @"SOOMLA NdkGlue";
 }
 
 @end
+
+void soomla::detail::ndkCallback(json_t *jsonParams) {
+    soomla::CCNdkBridgeIos::ndkCallback(jsonParams);
+    if (jsonParams) {
+        json_decref(jsonParams);
+    }
+}
